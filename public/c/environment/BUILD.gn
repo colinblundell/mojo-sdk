@@ -8,5 +8,5 @@ source_set("environment") {
     "logger.h",
   ]
 
-  deps = [ "//mojo/public/c/system" ]
+  deps = [ "//third_party/mojo/public/c/system" ]
 }

@@ -4,11 +4,11 @@
 
 source_set("tests") {
   testonly = true
-  visibility = [ "//mojo/public/cpp/system/tests:mojo_public_system_unittests" ]
+  visibility = [ "//third_party/mojo/public/cpp/system/tests:mojo_public_system_unittests" ]
 
   deps = [
-    "//mojo/public/c/environment",
-    "//mojo/public/c/system",
+    "//third_party/mojo/public/c/environment",
+    "//third_party/mojo/public/c/system",
     "//testing/gtest",
   ]
 
@@ -29,11 +29,11 @@ test("perftests") {
 
   deps = [
     "//base",
-    "//mojo/edk/test:run_all_perftests",
-    "//mojo/public/c/environment",
-    "//mojo/public/cpp/system",
-    "//mojo/public/cpp/test_support:test_utils",
-    "//mojo/public/cpp/utility",
+    "//third_party/mojo/edk/test:run_all_perftests",
+    "//third_party/mojo/public/c/environment",
+    "//third_party/mojo/public/cpp/system",
+    "//third_party/mojo/public/cpp/test_support:test_utils",
+    "//third_party/mojo/public/cpp/utility",
     "//testing/gtest",
   ]
 }

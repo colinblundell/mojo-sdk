@@ -7,8 +7,8 @@ source_set("test_utils") {
   testonly = true
   deps = [
     "//base",
-    "//mojo/public/c/test_support",
-    "//mojo/public/cpp/system",
+    "//third_party/mojo/public/c/test_support",
+    "//third_party/mojo/public/cpp/system",
     "//testing/gtest",
   ]
 

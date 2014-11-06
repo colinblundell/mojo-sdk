@@ -53,8 +53,8 @@ source_set("bindings") {
 
   deps = [
     ":callback",
-    "//mojo/public/cpp/environment",
-    "//mojo/public/cpp/system",
+    "//third_party/mojo/public/cpp/environment",
+    "//third_party/mojo/public/cpp/system",
   ]
 }
 
@@ -67,5 +67,5 @@ source_set("callback") {
     "lib/shared_ptr.h",
   ]
 
-  deps = [ "//mojo/public/cpp/system" ]
+  deps = [ "//third_party/mojo/public/cpp/system" ]
 }

@@ -25,10 +25,10 @@ source_set("application") {
   ]
 
   deps = [
-    "//mojo/public/cpp/bindings",
-    "//mojo/public/cpp/environment",
-    "//mojo/public/cpp/system",
-    "//mojo/public/interfaces/application",
+    "//third_party/mojo/public/cpp/bindings",
+    "//third_party/mojo/public/cpp/environment",
+    "//third_party/mojo/public/cpp/system",
+    "//third_party/mojo/public/interfaces/application",
   ]
 }
 
@@ -41,8 +41,8 @@ source_set("standalone") {
   public_deps = [ ":application" ]
 
   deps = [
-    "//mojo/public/cpp/environment:standalone",
-    "//mojo/public/cpp/utility",
+    "//third_party/mojo/public/cpp/environment:standalone",
+    "//third_party/mojo/public/cpp/utility",
   ]
 }
 
@@ -55,9 +55,9 @@ source_set("test_support") {
 
   deps = [
     ":application",
-    "//mojo/public/cpp/bindings",
-    "//mojo/public/cpp/environment",
-    "//mojo/public/cpp/system",
+    "//third_party/mojo/public/cpp/bindings",
+    "//third_party/mojo/public/cpp/environment",
+    "//third_party/mojo/public/cpp/system",
     "//testing/gtest",
   ]
 }
@@ -67,8 +67,8 @@ source_set("test_support_standalone") {
   sources = [ "lib/application_test_main.cc", ]
   public_deps = [ ":test_support", ]
   deps = [
-    "//mojo/public/cpp/environment:standalone",
-    "//mojo/public/cpp/application",
-    "//mojo/public/cpp/system",
+    "//third_party/mojo/public/cpp/environment:standalone",
+    "//third_party/mojo/public/cpp/application",
+    "//third_party/mojo/public/cpp/system",
   ]
 }

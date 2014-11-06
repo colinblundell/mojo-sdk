@@ -15,7 +15,7 @@ source_set("gles2") {
   public_configs = [ ":gles2_config" ]
 
   public_deps = [
-    "//mojo/public/c/environment",
-    "//mojo/public/c/system",
+    "//third_party/mojo/public/c/environment",
+    "//third_party/mojo/public/c/system",
   ]
 }

@@ -8,9 +8,9 @@ source_set("environment") {
     "environment.h",
   ]
 
-  public_deps = [ "//mojo/public/c/environment" ]
+  public_deps = [ "//third_party/mojo/public/c/environment" ]
 
-  deps = [ "//mojo/public/cpp/system" ]
+  deps = [ "//third_party/mojo/public/cpp/system" ]
 }
 
 source_set("standalone") {
@@ -26,7 +26,7 @@ source_set("standalone") {
   public_deps = [ ":environment" ]
 
   deps = [
-    "//mojo/public/c/environment",
-    "//mojo/public/cpp/utility",
+    "//third_party/mojo/public/c/environment",
+    "//third_party/mojo/public/cpp/utility",
   ]
 }

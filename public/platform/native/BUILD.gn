@@ -4,8 +4,8 @@
 
 source_set("system_thunks") {
   visibility = [
-    "//mojo/public/c/system:for_component",
-    "//mojo/public/c/system:for_shared_library",
+    "//third_party/mojo/public/c/system:for_component",
+    "//third_party/mojo/public/c/system:for_shared_library",
   ]
 
   sources = [
@@ -13,7 +13,7 @@ source_set("system_thunks") {
     "system_thunks.cc",
   ]
   defines = [ "MOJO_SYSTEM_IMPLEMENTATION" ]
-  deps = [ "//mojo/public/c/system" ]
+  deps = [ "//third_party/mojo/public/c/system" ]
 
   # The GYP target analogous to this one builds this code into a
   # static library.  When building for Android, both the GYP and GN
@@ -27,7 +27,7 @@ source_set("system_thunks") {
 
 # GYP version: mojo/mojo_public_gles2_for_loadable_module.gypi
 source_set("gles2_thunks") {
-  visibility = [ "//mojo/public/gles2:for_shared_library" ]
+  visibility = [ "//third_party/mojo/public/gles2:for_shared_library" ]
 
   sources = [
     "gles2_thunks.cc",
@@ -47,9 +47,9 @@ source_set("gles2_thunks") {
   configs += [ "//third_party/mojo/third_party/khronos:khronos_headers" ]
 
   deps = [
-    "//mojo/public/c/gles2",
-    "//mojo/public/c/environment",
-    "//mojo/public/c/system",
+    "//third_party/mojo/public/c/gles2",
+    "//third_party/mojo/public/c/environment",
+    "//third_party/mojo/public/c/system",
   ]
 
   if (is_mac) {

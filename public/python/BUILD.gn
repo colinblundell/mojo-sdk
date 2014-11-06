@@ -25,12 +25,12 @@ python_binary_module("system") {
     "src/python_system_helper.h",
   ]
   deps = [
-    "//mojo/public/c/environment",
-    "//mojo/public/c/system:for_shared_library",
-    "//mojo/public/cpp/environment:standalone",
-    "//mojo/public/cpp/system",
-    "//mojo/public/cpp/utility",
-    "//mojo/public/cpp/bindings:callback",
+    "//third_party/mojo/public/c/environment",
+    "//third_party/mojo/public/c/system:for_shared_library",
+    "//third_party/mojo/public/cpp/environment:standalone",
+    "//third_party/mojo/public/cpp/system",
+    "//third_party/mojo/public/cpp/utility",
+    "//third_party/mojo/public/cpp/bindings:callback",
     ":base",
   ]
 }

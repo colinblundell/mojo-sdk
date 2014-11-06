@@ -17,8 +17,8 @@ source_set("utility") {
   ]
 
   deps = [
-    "//mojo/public/cpp/bindings:callback",
-    "//mojo/public/cpp/system",
+    "//third_party/mojo/public/cpp/bindings:callback",
+    "//third_party/mojo/public/cpp/system",
   ]
 
   if (is_win) {

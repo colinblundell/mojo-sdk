@@ -13,5 +13,5 @@ source_set("system") {
     "message_pipe.h"
   ]
 
-  public_deps = [ "//mojo/public/c/system" ]
+  public_deps = [ "//third_party/mojo/public/c/system" ]
 }

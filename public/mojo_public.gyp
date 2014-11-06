@@ -23,7 +23,7 @@
       'type': 'none',
     },
     {
-      # GN version: //mojo/public/c/system
+      # GN version: //third_party/mojo/public/c/system
       'target_name': 'mojo_system',
       'type': 'static_library',
       'defines': [
@@ -62,7 +62,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/cpp/bindings
+      # GN version: //third_party/mojo/public/cpp/bindings
       'target_name': 'mojo_cpp_bindings',
       'type': 'static_library',
       'include_dirs': [
@@ -123,7 +123,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/js/bindings
+      # GN version: //third_party/mojo/public/js/bindings
       'target_name': 'mojo_js_bindings',
       'type': 'static_library',
       'include_dirs': [
@@ -135,7 +135,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/cpp/environment:standalone
+      # GN version: //third_party/mojo/public/cpp/environment:standalone
       'target_name': 'mojo_environment_standalone',
       'type': 'static_library',
       'sources': [
@@ -155,7 +155,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/cpp/utility
+      # GN version: //third_party/mojo/public/cpp/utility
       'target_name': 'mojo_utility',
       'type': 'static_library',
       'sources': [
@@ -186,7 +186,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/interfaces/application:application
+      # GN version: //third_party/mojo/public/interfaces/application:application
       'target_name': 'mojo_application_bindings',
       'type': 'static_library',
       'sources': [
@@ -203,7 +203,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/cpp/application
+      # GN version: //third_party/mojo/public/cpp/application
       'target_name': 'mojo_application_base',
       'type': 'static_library',
       'sources': [
@@ -233,7 +233,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/cpp/application:standalone"
+      # GN version: //third_party/mojo/public/cpp/application:standalone"
       'target_name': 'mojo_application_standalone',
       'type': 'static_library',
       'sources': [
@@ -249,7 +249,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/c/test_support
+      # GN version: //third_party/mojo/public/c/test_support
       'target_name': 'mojo_test_support',
       'defines': [
         'MOJO_TEST_SUPPORT_IMPLEMENTATION',
@@ -284,7 +284,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/cpp/test_support:test_utils
+      # GN version: //third_party/mojo/public/cpp/test_support:test_utils
       'target_name': 'mojo_public_test_utils',
       'type': 'static_library',
       'dependencies': [
@@ -299,7 +299,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/cpp/bindings/tests:mojo_public_bindings_test_utils
+      # GN version: //third_party/mojo/public/cpp/bindings/tests:mojo_public_bindings_test_utils
       'target_name': 'mojo_public_bindings_test_utils',
       'type': 'static_library',
       'dependencies': [
@@ -311,7 +311,7 @@
       ],
     },
     {
-      # GN version: //mojo/public/interfaces/bindings/tests:test_interfaces
+      # GN version: //third_party/mojo/public/interfaces/bindings/tests:test_interfaces
       'target_name': 'mojo_public_test_interfaces',
       'type': 'static_library',
       'sources': [
@@ -341,7 +341,7 @@
     ['OS == "android"', {
       'targets': [
         {
-          # GN version: //mojo/public/java_system
+          # GN version: //third_party/mojo/public/java_system
           'target_name': 'mojo_public_java',
           'type': 'none',
           'variables': {
@@ -350,7 +350,7 @@
           'includes': [ '../../build/java.gypi' ],
         },
         {
-        # GN version: //mojo/public/java_bindings
+        # GN version: //third_party/mojo/public/java_bindings
           'target_name': 'mojo_bindings_java',
           'type': 'none',
           'variables': {
