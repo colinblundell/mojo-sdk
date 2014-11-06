@@ -4,7 +4,7 @@
 
 module mojo;
 
-import "mojo/public/interfaces/application/service_provider.mojom";
+import "third_party/mojo/public/interfaces/application/service_provider.mojom";
 
 // Applications vend Services through the ServiceProvider interface. Services
 // implement Interfaces.
