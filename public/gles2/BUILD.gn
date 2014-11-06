@@ -1,6 +1,7 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+import("//build/config/mojo.gni")
 
 # In an is_component_build build, everything can link against //third_party/mojo/gles2
 # because it is built as a shared library. However, in a static build,
@@ -15,21 +16,21 @@
 # //third_party/mojo/public/gles2:for_shared_library to your deps
 
 group("for_shared_library") {
-  public_configs = [ "//third_party/mojo/third_party/khronos:khronos_headers" ]
-  public_deps = [ "//third_party/mojo/public/c/gles2" ]
+  public_configs = [ mojo_root + "mojo/third_party/khronos:khronos_headers" ]
+  public_deps = [ mojo_root + "mojo/public/c/gles2" ]
 
   if (is_component_build) {
-    deps = [ "//third_party/mojo/gles2" ]
+    deps = [ mojo_root + "mojo/gles2" ]
   } else {
-    deps = [ "//third_party/mojo/public/platform/native:gles2_thunks" ]
+    deps = [ mojo_root + "mojo/public/platform/native:gles2_thunks" ]
   }
 }
 
 group("for_component") {
-  public_configs = [ "//third_party/mojo/third_party/khronos:khronos_headers" ]
-  public_deps = [ "//third_party/mojo/public/c/gles2" ]
+  public_configs = [ mojo_root + "mojo/third_party/khronos:khronos_headers" ]
+  public_deps = [ mojo_root + "mojo/public/c/gles2" ]
 
   if (is_component_build) {
-    deps = [ "//third_party/mojo/gles2" ]
+    deps = [ mojo_root + "mojo/gles2" ]
   }
 }

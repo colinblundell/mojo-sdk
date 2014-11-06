@@ -1,6 +1,7 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+import("//build/config/mojo.gni")
 
 source_set("bindings") {
   sources = [
@@ -53,8 +54,8 @@ source_set("bindings") {
 
   deps = [
     ":callback",
-    "//third_party/mojo/public/cpp/environment",
-    "//third_party/mojo/public/cpp/system",
+    mojo_root + "mojo/public/cpp/environment",
+    mojo_root + "mojo/public/cpp/system",
   ]
 }
 
@@ -67,5 +68,5 @@ source_set("callback") {
     "lib/shared_ptr.h",
   ]
 
-  deps = [ "//third_party/mojo/public/cpp/system" ]
+  deps = [ mojo_root + "mojo/public/cpp/system" ]
 }

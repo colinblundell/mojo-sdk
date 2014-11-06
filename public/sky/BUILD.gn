@@ -1,17 +1,18 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+import("//build/config/mojo.gni")
 
 action_foreach("sky") {
   script = "convert_amd_modules_to_sky.py"
   sources = [
-    "//third_party/mojo/public/js/bindings/buffer.js",
-    "//third_party/mojo/public/js/bindings/codec.js",
-    "//third_party/mojo/public/js/bindings/connection.js",
-    "//third_party/mojo/public/js/bindings/connector.js",
-    "//third_party/mojo/public/js/bindings/router.js",
-    "//third_party/mojo/public/js/bindings/unicode.js",
-    "//third_party/mojo/public/js/bindings/validator.js",
+    mojo_root + "mojo/public/js/bindings/buffer.js",
+    mojo_root + "mojo/public/js/bindings/codec.js",
+    mojo_root + "mojo/public/js/bindings/connection.js",
+    mojo_root + "mojo/public/js/bindings/connector.js",
+    mojo_root + "mojo/public/js/bindings/router.js",
+    mojo_root + "mojo/public/js/bindings/unicode.js",
+    mojo_root + "mojo/public/js/bindings/validator.js",
   ]
   outputs = [
     "$target_gen_dir/{{source_name_part}}.sky",

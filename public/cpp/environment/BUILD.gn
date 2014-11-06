@@ -1,6 +1,7 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+import("//build/config/mojo.gni")
 
 source_set("environment") {
   sources = [
@@ -8,9 +9,9 @@ source_set("environment") {
     "environment.h",
   ]
 
-  public_deps = [ "//third_party/mojo/public/c/environment" ]
+  public_deps = [ mojo_root + "mojo/public/c/environment" ]
 
-  deps = [ "//third_party/mojo/public/cpp/system" ]
+  deps = [ mojo_root + "mojo/public/cpp/system" ]
 }
 
 source_set("standalone") {
@@ -26,7 +27,7 @@ source_set("standalone") {
   public_deps = [ ":environment" ]
 
   deps = [
-    "//third_party/mojo/public/c/environment",
-    "//third_party/mojo/public/cpp/utility",
+    mojo_root + "mojo/public/c/environment",
+    mojo_root + "mojo/public/cpp/utility",
   ]
 }

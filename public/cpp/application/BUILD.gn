@@ -1,6 +1,7 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+import("//build/config/mojo.gni")
 
 # GYP version: mojo/public/mojo_public.gyp:mojo_application_base
 source_set("application") {
@@ -25,10 +26,10 @@ source_set("application") {
   ]
 
   deps = [
-    "//third_party/mojo/public/cpp/bindings",
-    "//third_party/mojo/public/cpp/environment",
-    "//third_party/mojo/public/cpp/system",
-    "//third_party/mojo/public/interfaces/application",
+    mojo_root + "mojo/public/cpp/bindings",
+    mojo_root + "mojo/public/cpp/environment",
+    mojo_root + "mojo/public/cpp/system",
+    mojo_root + "mojo/public/interfaces/application",
   ]
 }
 
@@ -41,8 +42,8 @@ source_set("standalone") {
   public_deps = [ ":application" ]
 
   deps = [
-    "//third_party/mojo/public/cpp/environment:standalone",
-    "//third_party/mojo/public/cpp/utility",
+    mojo_root + "mojo/public/cpp/environment:standalone",
+    mojo_root + "mojo/public/cpp/utility",
   ]
 }
 
@@ -55,10 +56,10 @@ source_set("test_support") {
 
   deps = [
     ":application",
-    "//third_party/mojo/public/cpp/bindings",
-    "//third_party/mojo/public/cpp/environment",
-    "//third_party/mojo/public/cpp/system",
-    "//third_party/mojo/testing/gtest",
+    mojo_root + "mojo/public/cpp/bindings",
+    mojo_root + "mojo/public/cpp/environment",
+    mojo_root + "mojo/public/cpp/system",
+    mojo_root + "mojo/testing/gtest",
   ]
 }
 
@@ -67,8 +68,8 @@ source_set("test_support_standalone") {
   sources = [ "lib/application_test_main.cc", ]
   public_deps = [ ":test_support", ]
   deps = [
-    "//third_party/mojo/public/cpp/environment:standalone",
-    "//third_party/mojo/public/cpp/application",
-    "//third_party/mojo/public/cpp/system",
+    mojo_root + "mojo/public/cpp/environment:standalone",
+    mojo_root + "mojo/public/cpp/application",
+    mojo_root + "mojo/public/cpp/system",
   ]
 }
