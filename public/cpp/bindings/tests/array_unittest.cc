@@ -9,7 +9,7 @@
 #include "third_party/mojo/public/cpp/bindings/tests/container_test_util.h"
 #include "third_party/mojo/public/cpp/environment/environment.h"
 #include "third_party/mojo/public/interfaces/bindings/tests/test_structs.mojom.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace test {

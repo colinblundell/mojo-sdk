@@ -6,7 +6,7 @@
 #include "third_party/mojo/public/cpp/test_support/test_utils.h"
 #include "third_party/mojo/public/cpp/utility/run_loop.h"
 #include "third_party/mojo/public/interfaces/bindings/tests/sample_factory.mojom.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace test {

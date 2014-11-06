@@ -5,7 +5,7 @@
 #include "third_party/mojo/public/cpp/application/lib/service_registry.h"
 
 #include "third_party/mojo/public/cpp/application/lib/service_connector.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace internal {

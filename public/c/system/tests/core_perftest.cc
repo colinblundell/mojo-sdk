@@ -14,7 +14,7 @@
 #include "third_party/mojo/public/cpp/system/macros.h"
 #include "third_party/mojo/public/cpp/test_support/test_support.h"
 #include "third_party/mojo/public/cpp/test_support/test_utils.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 // TODO(vtl): (here and below) crbug.com/342893
 #if !defined(WIN32)

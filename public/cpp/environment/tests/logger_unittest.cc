@@ -4,7 +4,7 @@
 
 #include "third_party/mojo/public/c/environment/logger.h"
 #include "third_party/mojo/public/cpp/environment/environment.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace {

@@ -5,7 +5,7 @@
 #include "third_party/mojo/public/cpp/utility/thread.h"
 
 #include "third_party/mojo/public/cpp/system/macros.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace {

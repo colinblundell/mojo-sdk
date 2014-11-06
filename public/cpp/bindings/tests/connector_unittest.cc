@@ -11,7 +11,7 @@
 #include "third_party/mojo/public/cpp/environment/environment.h"
 #include "third_party/mojo/public/cpp/system/macros.h"
 #include "third_party/mojo/public/cpp/utility/run_loop.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace test {

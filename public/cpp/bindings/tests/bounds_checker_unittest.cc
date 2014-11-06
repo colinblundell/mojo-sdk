@@ -7,7 +7,7 @@
 #include "third_party/mojo/public/cpp/bindings/lib/bindings_serialization.h"
 #include "third_party/mojo/public/cpp/bindings/lib/bounds_checker.h"
 #include "third_party/mojo/public/cpp/system/core.h"
-#include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace test {
