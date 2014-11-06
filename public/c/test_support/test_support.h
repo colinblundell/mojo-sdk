@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 
-#include "third_party/mojo/public/c/test_support/test_support_export.h"
+#include "mojo/public/c/test_support/test_support_export.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -5,8 +5,8 @@
 #ifndef MOJO_PUBLIC_APPLICATION_SERVICE_PROVIDER_IMPL_H_
 #define MOJO_PUBLIC_APPLICATION_SERVICE_PROVIDER_IMPL_H_
 
-#include "third_party/mojo/public/cpp/application/lib/service_connector.h"
-#include "third_party/mojo/public/interfaces/application/service_provider.mojom.h"
+#include "mojo/public/cpp/application/lib/service_connector.h"
+#include "mojo/public/interfaces/application/service_provider.mojom.h"
 
 namespace mojo {
 namespace internal {

@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/cpp/bindings/message_filter.h"
+#include "mojo/public/cpp/bindings/message_filter.h"
 
 namespace mojo {
 

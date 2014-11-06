@@ -2,14 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/cpp/utility/run_loop.h"
+#include "mojo/public/cpp/utility/run_loop.h"
 
 #include <string>
 
-#include "third_party/mojo/public/cpp/system/core.h"
-#include "third_party/mojo/public/cpp/test_support/test_utils.h"
-#include "third_party/mojo/public/cpp/utility/run_loop_handler.h"
-#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
+#include "mojo/public/cpp/system/core.h"
+#include "mojo/public/cpp/test_support/test_utils.h"
+#include "mojo/public/cpp/utility/run_loop_handler.h"
+#include "mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace {

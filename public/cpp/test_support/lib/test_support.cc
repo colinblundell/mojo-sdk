@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/cpp/test_support/test_support.h"
+#include "mojo/public/cpp/test_support/test_support.h"
 
 #include <stdlib.h>
 

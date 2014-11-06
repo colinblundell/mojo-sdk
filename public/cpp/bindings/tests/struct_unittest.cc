@@ -2,10 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/cpp/bindings/lib/fixed_buffer.h"
-#include "third_party/mojo/public/cpp/environment/environment.h"
-#include "third_party/mojo/public/interfaces/bindings/tests/test_structs.mojom.h"
-#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
+#include "mojo/public/cpp/bindings/lib/fixed_buffer.h"
+#include "mojo/public/cpp/environment/environment.h"
+#include "mojo/public/interfaces/bindings/tests/test_structs.mojom.h"
+#include "mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace test {

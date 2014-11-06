@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_C_SYSTEM_MAIN_H_
 #define MOJO_PUBLIC_C_SYSTEM_MAIN_H_
 
-#include "third_party/mojo/public/c/system/types.h"
+#include "mojo/public/c/system/types.h"
 
 // Implement MojoMain directly as the entry point for an application.
 //

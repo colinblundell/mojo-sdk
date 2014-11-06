@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/c/system/main.h"
-#include "third_party/mojo/public/cpp/application/application_delegate.h"
-#include "third_party/mojo/public/cpp/application/application_impl.h"
-#include "third_party/mojo/public/cpp/application/application_test_base.h"
-#include "third_party/mojo/public/cpp/environment/logging.h"
-#include "third_party/mojo/public/cpp/system/message_pipe.h"
+#include "mojo/public/c/system/main.h"
+#include "mojo/public/cpp/application/application_delegate.h"
+#include "mojo/public/cpp/application/application_impl.h"
+#include "mojo/public/cpp/application/application_test_base.h"
+#include "mojo/public/cpp/environment/logging.h"
+#include "mojo/public/cpp/system/message_pipe.h"
 
 MojoResult MojoMain(MojoHandle shell_handle) {
   // An Environment instance is needed to construct run loops.

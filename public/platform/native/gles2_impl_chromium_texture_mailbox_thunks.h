@@ -7,7 +7,7 @@
 
 #include <stddef.h>
 
-#include "third_party/mojo/public/c/gles2/chromium_texture_mailbox.h"
+#include "mojo/public/c/gles2/chromium_texture_mailbox.h"
 
 // Specifies the frozen API for the GLES2 CHROMIUM_texture_mailbox extension.
 #pragma pack(push, 8)
@@ -16,7 +16,7 @@ struct MojoGLES2ImplChromiumTextureMailboxThunks {
 
 #define VISIT_GL_CALL(Function, ReturnType, PARAMETERS, ARGUMENTS) \
   ReturnType(*Function) PARAMETERS;
-#include "third_party/mojo/public/c/gles2/gles2_call_visitor_chromium_texture_mailbox_autogen.h"
+#include "mojo/public/c/gles2/gles2_call_visitor_chromium_texture_mailbox_autogen.h"
 #undef VISIT_GL_CALL
 };
 #pragma pack(pop)
@@ -29,7 +29,7 @@ MojoMakeGLES2ImplChromiumTextureMailboxThunks() {
       gles2_impl_chromium_texture_mailbox_thunks = {
           sizeof(MojoGLES2ImplChromiumTextureMailboxThunks),
 #define VISIT_GL_CALL(Function, ReturnType, PARAMETERS, ARGUMENTS) gl##Function,
-#include "third_party/mojo/public/c/gles2/gles2_call_visitor_chromium_texture_mailbox_autogen.h"
+#include "mojo/public/c/gles2/gles2_call_visitor_chromium_texture_mailbox_autogen.h"
 #undef VISIT_GL_CALL
       };
 

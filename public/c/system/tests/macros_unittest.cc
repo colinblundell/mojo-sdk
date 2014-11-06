@@ -8,13 +8,13 @@
 // TODO(vtl): Fix no-compile tests (which are all disabled; crbug.com/105388)
 // and write some "negative" tests.
 
-#include "third_party/mojo/public/c/system/macros.h"
+#include "mojo/public/c/system/macros.h"
 
 #include <assert.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
+#include "mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace {

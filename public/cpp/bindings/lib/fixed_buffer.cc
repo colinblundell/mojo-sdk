@@ -2,14 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/cpp/bindings/lib/fixed_buffer.h"
+#include "mojo/public/cpp/bindings/lib/fixed_buffer.h"
 
 #include <stdlib.h>
 
 #include <algorithm>
 
-#include "third_party/mojo/public/cpp/bindings/lib/bindings_serialization.h"
-#include "third_party/mojo/public/cpp/environment/logging.h"
+#include "mojo/public/cpp/bindings/lib/bindings_serialization.h"
+#include "mojo/public/cpp/environment/logging.h"
 
 namespace mojo {
 namespace internal {

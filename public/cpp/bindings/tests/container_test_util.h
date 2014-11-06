@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_TESTS_CONTAINER_TEST_UTIL_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_TESTS_CONTAINER_TEST_UTIL_H_
 
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 

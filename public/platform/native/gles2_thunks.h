@@ -7,7 +7,7 @@
 
 #include <stddef.h>
 
-#include "third_party/mojo/public/c/gles2/gles2.h"
+#include "mojo/public/c/gles2/gles2.h"
 
 // Structure used to bind the interface which manipulates GLES2 surfaces to a
 // DSO to theose of the embedder.

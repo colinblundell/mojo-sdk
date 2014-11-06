@@ -7,7 +7,7 @@
 
 #include <queue>
 
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 class Message;

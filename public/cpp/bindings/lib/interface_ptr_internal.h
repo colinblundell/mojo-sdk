@@ -7,10 +7,10 @@
 
 #include <algorithm>  // For |std::swap()|.
 
-#include "third_party/mojo/public/cpp/bindings/lib/filter_chain.h"
-#include "third_party/mojo/public/cpp/bindings/lib/message_header_validator.h"
-#include "third_party/mojo/public/cpp/bindings/lib/router.h"
-#include "third_party/mojo/public/cpp/environment/logging.h"
+#include "mojo/public/cpp/bindings/lib/filter_chain.h"
+#include "mojo/public/cpp/bindings/lib/message_header_validator.h"
+#include "mojo/public/cpp/bindings/lib/router.h"
+#include "mojo/public/cpp/environment/logging.h"
 
 struct MojoAsyncWaiter;
 

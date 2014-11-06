@@ -7,10 +7,10 @@
 #include <sstream>
 #include <string>
 
-#include "third_party/mojo/public/cpp/environment/environment.h"
-#include "third_party/mojo/public/cpp/environment/logging.h"
-#include "third_party/mojo/public/cpp/system/macros.h"
-#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
+#include "mojo/public/cpp/environment/environment.h"
+#include "mojo/public/cpp/environment/logging.h"
+#include "mojo/public/cpp/system/macros.h"
+#include "mojo/testing/gtest/include/gtest/gtest.h"
 
 // A macro, so it can be automatically joined with other string literals. (Not
 // simply __FILE__, since that may contain a path.)

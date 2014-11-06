@@ -11,10 +11,10 @@
 #include <string>
 #include <vector>
 
-#include "third_party/mojo/public/cpp/bindings/lib/array_internal.h"
-#include "third_party/mojo/public/cpp/bindings/lib/bindings_internal.h"
-#include "third_party/mojo/public/cpp/bindings/lib/template_util.h"
-#include "third_party/mojo/public/cpp/bindings/type_converter.h"
+#include "mojo/public/cpp/bindings/lib/array_internal.h"
+#include "mojo/public/cpp/bindings/lib/bindings_internal.h"
+#include "mojo/public/cpp/bindings/lib/template_util.h"
+#include "mojo/public/cpp/bindings/type_converter.h"
 
 namespace mojo {
 

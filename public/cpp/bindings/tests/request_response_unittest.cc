@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/cpp/environment/environment.h"
-#include "third_party/mojo/public/cpp/test_support/test_utils.h"
-#include "third_party/mojo/public/cpp/utility/run_loop.h"
-#include "third_party/mojo/public/interfaces/bindings/tests/sample_import.mojom.h"
-#include "third_party/mojo/public/interfaces/bindings/tests/sample_interfaces.mojom.h"
-#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
+#include "mojo/public/cpp/environment/environment.h"
+#include "mojo/public/cpp/test_support/test_utils.h"
+#include "mojo/public/cpp/utility/run_loop.h"
+#include "mojo/public/interfaces/bindings/tests/sample_import.mojom.h"
+#include "mojo/public/interfaces/bindings/tests/sample_interfaces.mojom.h"
+#include "mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace test {

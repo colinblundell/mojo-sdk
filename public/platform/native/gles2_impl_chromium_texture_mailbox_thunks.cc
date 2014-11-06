@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/platform/native/gles2_impl_chromium_texture_mailbox_thunks.h"
+#include "mojo/public/platform/native/gles2_impl_chromium_texture_mailbox_thunks.h"
 
 #include <assert.h>
 
-#include "third_party/mojo/public/platform/native/thunk_export.h"
+#include "mojo/public/platform/native/thunk_export.h"
 
 extern "C" {
 static MojoGLES2ImplChromiumTextureMailboxThunks
@@ -17,7 +17,7 @@ static MojoGLES2ImplChromiumTextureMailboxThunks
     assert(g_impl_chromium_texture_mailbox_thunks.Function);          \
     return g_impl_chromium_texture_mailbox_thunks.Function ARGUMENTS; \
   }
-#include "third_party/mojo/public/c/gles2/gles2_call_visitor_chromium_texture_mailbox_autogen.h"
+#include "mojo/public/c/gles2/gles2_call_visitor_chromium_texture_mailbox_autogen.h"
 #undef VISIT_GL_CALL
 
 extern "C" THUNK_EXPORT size_t MojoSetGLES2ImplChromiumTextureMailboxThunks(

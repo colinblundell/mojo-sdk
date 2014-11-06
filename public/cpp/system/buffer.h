@@ -7,9 +7,9 @@
 
 #include <assert.h>
 
-#include "third_party/mojo/public/c/system/buffer.h"
-#include "third_party/mojo/public/cpp/system/handle.h"
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/c/system/buffer.h"
+#include "mojo/public/cpp/system/handle.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 

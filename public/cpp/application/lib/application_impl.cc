@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/cpp/application/application_impl.h"
+#include "mojo/public/cpp/application/application_impl.h"
 
-#include "third_party/mojo/public/cpp/application/application_delegate.h"
-#include "third_party/mojo/public/cpp/application/lib/service_registry.h"
-#include "third_party/mojo/public/cpp/bindings/interface_ptr.h"
-#include "third_party/mojo/public/cpp/environment/logging.h"
+#include "mojo/public/cpp/application/application_delegate.h"
+#include "mojo/public/cpp/application/lib/service_registry.h"
+#include "mojo/public/cpp/bindings/interface_ptr.h"
+#include "mojo/public/cpp/environment/logging.h"
 
 namespace mojo {
 

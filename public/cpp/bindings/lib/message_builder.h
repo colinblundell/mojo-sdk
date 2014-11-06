@@ -7,8 +7,8 @@
 
 #include <stdint.h>
 
-#include "third_party/mojo/public/cpp/bindings/lib/fixed_buffer.h"
-#include "third_party/mojo/public/cpp/bindings/lib/message_internal.h"
+#include "mojo/public/cpp/bindings/lib/fixed_buffer.h"
+#include "mojo/public/cpp/bindings/lib/message_internal.h"
 
 namespace mojo {
 class Message;

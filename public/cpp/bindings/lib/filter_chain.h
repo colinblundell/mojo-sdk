@@ -7,9 +7,9 @@
 
 #include <vector>
 
-#include "third_party/mojo/public/cpp/bindings/message.h"
-#include "third_party/mojo/public/cpp/bindings/message_filter.h"
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/cpp/bindings/message.h"
+#include "mojo/public/cpp/bindings/message_filter.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 namespace internal {

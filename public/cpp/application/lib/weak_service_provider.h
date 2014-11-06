@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_APPLICATION_LIB_WEAK_SERVICE_PROVIDER_H_
 #define MOJO_PUBLIC_APPLICATION_LIB_WEAK_SERVICE_PROVIDER_H_
 
-#include "third_party/mojo/public/interfaces/application/service_provider.mojom.h"
+#include "mojo/public/interfaces/application/service_provider.mojom.h"
 
 namespace mojo {
 class ServiceProviderImpl;

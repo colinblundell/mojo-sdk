@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "third_party/mojo/public/c/test_support/test_support.h"
+#include "mojo/public/c/test_support/test_support.h"
 
 namespace mojo {
 namespace test {

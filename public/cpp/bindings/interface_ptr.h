@@ -7,10 +7,10 @@
 
 #include <algorithm>
 
-#include "third_party/mojo/public/cpp/bindings/error_handler.h"
-#include "third_party/mojo/public/cpp/bindings/lib/interface_ptr_internal.h"
-#include "third_party/mojo/public/cpp/environment/environment.h"
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/cpp/bindings/error_handler.h"
+#include "mojo/public/cpp/bindings/lib/interface_ptr_internal.h"
+#include "mojo/public/cpp/environment/environment.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 class ErrorHandler;

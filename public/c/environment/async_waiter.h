@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_C_ENVIRONMENT_ASYNC_WAITER_H_
 #define MOJO_PUBLIC_C_ENVIRONMENT_ASYNC_WAITER_H_
 
-#include "third_party/mojo/public/c/system/types.h"
+#include "mojo/public/c/system/types.h"
 
 typedef uintptr_t MojoAsyncWaitID;
 

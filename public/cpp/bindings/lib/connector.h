@@ -5,11 +5,11 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_LIB_CONNECTOR_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_LIB_CONNECTOR_H_
 
-#include "third_party/mojo/public/c/environment/async_waiter.h"
-#include "third_party/mojo/public/cpp/bindings/lib/message_queue.h"
-#include "third_party/mojo/public/cpp/bindings/message.h"
-#include "third_party/mojo/public/cpp/environment/environment.h"
-#include "third_party/mojo/public/cpp/system/core.h"
+#include "mojo/public/c/environment/async_waiter.h"
+#include "mojo/public/cpp/bindings/lib/message_queue.h"
+#include "mojo/public/cpp/bindings/message.h"
+#include "mojo/public/cpp/environment/environment.h"
+#include "mojo/public/cpp/system/core.h"
 
 namespace mojo {
 class ErrorHandler;

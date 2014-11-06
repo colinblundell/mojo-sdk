@@ -5,9 +5,9 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_LIB_BINDINGS_INTERNAL_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_LIB_BINDINGS_INTERNAL_H_
 
-#include "third_party/mojo/public/cpp/bindings/lib/template_util.h"
-#include "third_party/mojo/public/cpp/bindings/struct_ptr.h"
-#include "third_party/mojo/public/cpp/system/core.h"
+#include "mojo/public/cpp/bindings/lib/template_util.h"
+#include "mojo/public/cpp/bindings/struct_ptr.h"
+#include "mojo/public/cpp/system/core.h"
 
 namespace mojo {
 class String;

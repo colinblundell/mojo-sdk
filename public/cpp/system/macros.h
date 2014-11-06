@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_CPP_SYSTEM_MACROS_H_
 #define MOJO_PUBLIC_CPP_SYSTEM_MACROS_H_
 
-#include "third_party/mojo/public/c/system/macros.h"
+#include "mojo/public/c/system/macros.h"
 
 // Define a set of C++ specific macros.
 // Mojo C++ API users can assume that mojo/public/cpp/system/macros.h

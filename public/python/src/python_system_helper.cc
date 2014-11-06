@@ -2,14 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "third_party/mojo/public/python/src/python_system_helper.h"
+#include "mojo/public/python/src/python_system_helper.h"
 
 #include "Python.h"
 
-#include "third_party/mojo/public/cpp/environment/environment.h"
-#include "third_party/mojo/public/cpp/environment/logging.h"
-#include "third_party/mojo/public/cpp/system/macros.h"
-#include "third_party/mojo/public/cpp/utility/run_loop.h"
+#include "mojo/public/cpp/environment/environment.h"
+#include "mojo/public/cpp/environment/logging.h"
+#include "mojo/public/cpp/system/macros.h"
+#include "mojo/public/cpp/utility/run_loop.h"
 
 namespace {
 

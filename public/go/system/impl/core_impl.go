@@ -4,8 +4,8 @@
 
 package impl
 
-//#include "third_party/mojo/public/platform/native/system_thunks.h"
-//#include "third_party/mojo/public/c/system/main.h"
+//#include "mojo/public/platform/native/system_thunks.h"
+//#include "mojo/public/c/system/main.h"
 import "C"
 import "unsafe"
 

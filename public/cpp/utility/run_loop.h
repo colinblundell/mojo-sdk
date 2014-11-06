@@ -8,8 +8,8 @@
 #include <map>
 #include <queue>
 
-#include "third_party/mojo/public/cpp/bindings/callback.h"
-#include "third_party/mojo/public/cpp/system/core.h"
+#include "mojo/public/cpp/bindings/callback.h"
+#include "mojo/public/cpp/system/core.h"
 
 namespace mojo {
 

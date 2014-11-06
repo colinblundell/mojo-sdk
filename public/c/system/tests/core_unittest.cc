@@ -4,11 +4,11 @@
 
 // This file tests the C API.
 
-#include "third_party/mojo/public/c/system/core.h"
+#include "mojo/public/c/system/core.h"
 
 #include <string.h>
 
-#include "third_party/mojo/testing/gtest/include/gtest/gtest.h"
+#include "mojo/testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace {

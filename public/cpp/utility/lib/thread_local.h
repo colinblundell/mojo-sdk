@@ -9,7 +9,7 @@
 #include <pthread.h>
 #endif
 
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 namespace internal {

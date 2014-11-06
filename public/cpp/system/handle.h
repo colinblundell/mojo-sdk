@@ -8,9 +8,9 @@
 #include <assert.h>
 #include <limits>
 
-#include "third_party/mojo/public/c/system/functions.h"
-#include "third_party/mojo/public/c/system/types.h"
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/c/system/functions.h"
+#include "mojo/public/c/system/types.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 

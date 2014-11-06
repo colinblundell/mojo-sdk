@@ -12,7 +12,7 @@
 
 #include <stdint.h>
 
-#include "third_party/mojo/public/c/system/macros.h"
+#include "mojo/public/c/system/macros.h"
 
 // TODO(vtl): Notes: Use of undefined flags will lead to undefined behavior
 // (typically they'll be ignored), not necessarily an error.

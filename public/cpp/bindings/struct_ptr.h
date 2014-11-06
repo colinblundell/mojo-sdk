@@ -7,9 +7,9 @@
 
 #include <new>
 
-#include "third_party/mojo/public/cpp/bindings/type_converter.h"
-#include "third_party/mojo/public/cpp/environment/logging.h"
-#include "third_party/mojo/public/cpp/system/macros.h"
+#include "mojo/public/cpp/bindings/type_converter.h"
+#include "mojo/public/cpp/environment/logging.h"
+#include "mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 namespace internal {

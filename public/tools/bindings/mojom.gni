@@ -20,11 +20,13 @@
 #   testonly (optional)
 #
 #   visibility (optional)
+import("//build/config/mojo.gni")
+
 template("mojom") {
   assert(defined(invoker.sources),
          "\"sources\" must be defined for the $target_name template.")
 
-  generator_root = "//third_party/mojo/public/tools/bindings"
+  generator_root = mojo_root + "mojo/public/tools/bindings"
   generator_script = "$generator_root/mojom_bindings_generator.py"
   generator_sources = [
     generator_script,
@@ -137,7 +139,7 @@ template("mojom") {
     data = process_file_template(invoker.sources, generator_js_outputs)
     deps = [
       ":$generator_target_name",
-      "//third_party/mojo/public/cpp/bindings",
+      mojo_root + "mojo/public/cpp/bindings",
     ]
     if (defined(invoker.deps)) {
       deps += invoker.deps
@@ -175,8 +177,8 @@ template("mojom") {
     java_target_name = target_name + "_java"
     android_library(java_target_name) {
       deps = [
-        "//third_party/mojo/public/java:bindings",
-        "//third_party/mojo/public/java:system",
+        mojo_root + "mojo/public/java:bindings",
+        mojo_root + "mojo/public/java:system",
       ]
 
       foreach(d, all_deps) {
