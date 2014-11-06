@@ -120,8 +120,8 @@ template("mojom") {
     args = [
       "{{source}}",
       "--use_chromium_bundled_pylibs",
-      "-d", rebase_path("//third_party", root_build_dir),
-      "-I", rebase_path("//third_party", root_build_dir),
+      "-d", rebase_path("//", root_build_dir),
+      "-I", rebase_path("//", root_build_dir),
       "-o", rebase_path(root_gen_dir),
     ]
   }
