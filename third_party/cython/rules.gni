@@ -8,7 +8,7 @@ template("python_binary_module") {
   assert(defined(invoker.sources))
   assert(defined(invoker.python_base_module))
 
-  cython_root = "//third_party/cython"
+  cython_root = "//third_party/mojo/third_party/cython"
   cython_script = "$cython_root/src/cython.py"
   cython_output = "${target_out_dir}/${target_name}.cc"
 
@@ -42,7 +42,7 @@ template("python_binary_module") {
 
   config(config_name) {
     visibility = target_visibility
-    python_flags = "//third_party/cython/python_flags.py"
+    python_flags = "//third_party/mojo/third_party/cython/python_flags.py"
     include_dirs = exec_script(python_flags,
                                [ "--gn", "--includes" ],
                                "list lines")

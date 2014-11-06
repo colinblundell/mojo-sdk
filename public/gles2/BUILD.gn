@@ -15,7 +15,7 @@
 # //mojo/public/gles2:for_shared_library to your deps
 
 group("for_shared_library") {
-  public_configs = [ "//third_party/khronos:khronos_headers" ]
+  public_configs = [ "//third_party/mojo/third_party/khronos:khronos_headers" ]
   public_deps = [ "//mojo/public/c/gles2" ]
 
   if (is_component_build) {
@@ -26,7 +26,7 @@ group("for_shared_library") {
 }
 
 group("for_component") {
-  public_configs = [ "//third_party/khronos:khronos_headers" ]
+  public_configs = [ "//third_party/mojo/third_party/khronos:khronos_headers" ]
   public_deps = [ "//mojo/public/c/gles2" ]
 
   if (is_component_build) {
