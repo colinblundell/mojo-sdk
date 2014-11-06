@@ -4,7 +4,7 @@
 import("//build/config/mojo.gni")
 
 config("khronos_headers") {
-  include_dirs = [
+  include_dirs += [
     ".",
     "//gpu",  # Contains GLES2/gl2chromium.h
   ]
