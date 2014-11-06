@@ -9,7 +9,7 @@
 
 #include <stdint.h>
 
-#include "mojo/public/c/gles2/gles2_export.h"
+#include "third_party/mojo/public/c/gles2/gles2_export.h"
 
 #ifdef __cplusplus
 extern "C" {

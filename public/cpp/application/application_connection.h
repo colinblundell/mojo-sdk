@@ -7,8 +7,8 @@
 
 #include <string>
 
-#include "mojo/public/cpp/application/lib/service_connector.h"
-#include "mojo/public/interfaces/application/service_provider.mojom.h"
+#include "third_party/mojo/public/cpp/application/lib/service_connector.h"
+#include "third_party/mojo/public/interfaces/application/service_provider.mojom.h"
 
 namespace mojo {
 

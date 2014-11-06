@@ -5,8 +5,8 @@
 #ifndef MOJO_PUBLIC_CPP_APPLICATION_LIB_SERVICE_CONNECTOR_H_
 #define MOJO_PUBLIC_CPP_APPLICATION_LIB_SERVICE_CONNECTOR_H_
 
-#include "mojo/public/cpp/application/interface_factory.h"
-#include "mojo/public/cpp/bindings/interface_request.h"
+#include "third_party/mojo/public/cpp/application/interface_factory.h"
+#include "third_party/mojo/public/cpp/bindings/interface_request.h"
 
 namespace mojo {
 class ApplicationConnection;

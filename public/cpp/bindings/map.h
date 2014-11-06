@@ -7,7 +7,7 @@
 
 #include <map>
 
-#include "mojo/public/cpp/bindings/lib/map_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/map_internal.h"
 
 namespace mojo {
 

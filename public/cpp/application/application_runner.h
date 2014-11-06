@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_APPLICATION_APPLICATION_RUNNER_H_
 #define MOJO_PUBLIC_APPLICATION_APPLICATION_RUNNER_H_
 
-#include "mojo/public/cpp/system/core.h"
+#include "third_party/mojo/public/cpp/system/core.h"
 
 namespace mojo {
 

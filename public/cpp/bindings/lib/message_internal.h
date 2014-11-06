@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_LIB_MESSAGE_INTERNAL_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_LIB_MESSAGE_INTERNAL_H_
 
-#include "mojo/public/cpp/bindings/lib/bindings_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/bindings_internal.h"
 
 namespace mojo {
 namespace internal {

@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_LIB_SHARED_PTR_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_LIB_SHARED_PTR_H_
 
-#include "mojo/public/cpp/bindings/lib/shared_data.h"
+#include "third_party/mojo/public/cpp/bindings/lib/shared_data.h"
 
 namespace mojo {
 namespace internal {

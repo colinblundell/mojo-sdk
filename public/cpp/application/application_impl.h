@@ -6,12 +6,12 @@
 #define MOJO_PUBLIC_APPLICATION_APPLICATION_IMPL_H_
 #include <vector>
 
-#include "mojo/public/cpp/application/application_connection.h"
-#include "mojo/public/cpp/application/lib/service_connector.h"
-#include "mojo/public/cpp/application/lib/service_registry.h"
-#include "mojo/public/cpp/system/core.h"
-#include "mojo/public/interfaces/application/application.mojom.h"
-#include "mojo/public/interfaces/application/shell.mojom.h"
+#include "third_party/mojo/public/cpp/application/application_connection.h"
+#include "third_party/mojo/public/cpp/application/lib/service_connector.h"
+#include "third_party/mojo/public/cpp/application/lib/service_registry.h"
+#include "third_party/mojo/public/cpp/system/core.h"
+#include "third_party/mojo/public/interfaces/application/application.mojom.h"
+#include "third_party/mojo/public/interfaces/application/shell.mojom.h"
 
 namespace mojo {
 

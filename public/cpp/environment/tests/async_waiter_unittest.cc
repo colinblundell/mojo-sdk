@@ -4,12 +4,12 @@
 
 #include <string>
 
-#include "mojo/public/c/environment/async_waiter.h"
-#include "mojo/public/cpp/environment/environment.h"
-#include "mojo/public/cpp/system/core.h"
-#include "mojo/public/cpp/system/macros.h"
-#include "mojo/public/cpp/test_support/test_utils.h"
-#include "mojo/public/cpp/utility/run_loop.h"
+#include "third_party/mojo/public/c/environment/async_waiter.h"
+#include "third_party/mojo/public/cpp/environment/environment.h"
+#include "third_party/mojo/public/cpp/system/core.h"
+#include "third_party/mojo/public/cpp/system/macros.h"
+#include "third_party/mojo/public/cpp/test_support/test_utils.h"
+#include "third_party/mojo/public/cpp/utility/run_loop.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {

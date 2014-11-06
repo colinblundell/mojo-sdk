@@ -7,7 +7,7 @@
 
 #include <stddef.h>
 
-#include "mojo/public/c/gles2/chromium_sync_point.h"
+#include "third_party/mojo/public/c/gles2/chromium_sync_point.h"
 
 // Specifies the frozen API for the GLES2 CHROMIUM_sync_point extension.
 #pragma pack(push, 8)
@@ -16,7 +16,7 @@ struct MojoGLES2ImplChromiumSyncPointThunks {
 
 #define VISIT_GL_CALL(Function, ReturnType, PARAMETERS, ARGUMENTS) \
   ReturnType(*Function) PARAMETERS;
-#include "mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
+#include "third_party/mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
 #undef VISIT_GL_CALL
 };
 #pragma pack(pop)
@@ -28,7 +28,7 @@ MojoMakeGLES2ImplChromiumSyncPointThunks() {
   MojoGLES2ImplChromiumSyncPointThunks gles2_impl_chromium_sync_point_thunks = {
       sizeof(MojoGLES2ImplChromiumSyncPointThunks),
 #define VISIT_GL_CALL(Function, ReturnType, PARAMETERS, ARGUMENTS) gl##Function,
-#include "mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
+#include "third_party/mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
 #undef VISIT_GL_CALL
   };
 

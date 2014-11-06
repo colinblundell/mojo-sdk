@@ -11,10 +11,10 @@
 
 #include <map>
 
-#include "mojo/public/c/environment/async_waiter.h"
-#include "mojo/public/c/system/types.h"
-#include "mojo/public/cpp/bindings/callback.h"
-#include "mojo/public/cpp/bindings/lib/shared_ptr.h"
+#include "third_party/mojo/public/c/environment/async_waiter.h"
+#include "third_party/mojo/public/c/system/types.h"
+#include "third_party/mojo/public/cpp/bindings/callback.h"
+#include "third_party/mojo/public/cpp/bindings/lib/shared_ptr.h"
 
 namespace mojo {
 namespace python {

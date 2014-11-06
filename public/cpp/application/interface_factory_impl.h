@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_CPP_APPLICATION_INTERFACE_FACTORY_IMPL_H_
 #define MOJO_PUBLIC_CPP_APPLICATION_INTERFACE_FACTORY_IMPL_H_
 
-#include "mojo/public/cpp/application/interface_factory.h"
+#include "third_party/mojo/public/cpp/application/interface_factory.h"
 
 namespace mojo {
 

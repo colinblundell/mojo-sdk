@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "mojo/public/cpp/application/application_runner.h"
+#include "third_party/mojo/public/cpp/application/application_runner.h"
 
-#include "mojo/public/cpp/application/application_delegate.h"
-#include "mojo/public/cpp/application/application_impl.h"
-#include "mojo/public/cpp/environment/environment.h"
-#include "mojo/public/cpp/utility/run_loop.h"
+#include "third_party/mojo/public/cpp/application/application_delegate.h"
+#include "third_party/mojo/public/cpp/application/application_impl.h"
+#include "third_party/mojo/public/cpp/environment/environment.h"
+#include "third_party/mojo/public/cpp/utility/run_loop.h"
 
 namespace mojo {
 

@@ -10,9 +10,9 @@
 #include <stdint.h>
 #include <GLES2/gl2.h>
 
-#include "mojo/public/c/gles2/gles2_export.h"
-#include "mojo/public/c/gles2/gles2_types.h"
-#include "mojo/public/c/system/types.h"
+#include "third_party/mojo/public/c/gles2/gles2_export.h"
+#include "third_party/mojo/public/c/gles2/gles2_types.h"
+#include "third_party/mojo/public/c/system/types.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -20,7 +20,7 @@ extern "C" {
 
 #define VISIT_GL_CALL(Function, ReturnType, PARAMETERS, ARGUMENTS) \
   MOJO_GLES2_EXPORT ReturnType GL_APIENTRY gl##Function PARAMETERS;
-#include "mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
+#include "third_party/mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
 #undef VISIT_GL_CALL
 
 #ifdef __cplusplus

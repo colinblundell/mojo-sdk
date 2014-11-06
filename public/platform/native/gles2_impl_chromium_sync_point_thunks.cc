@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "mojo/public/platform/native/gles2_impl_chromium_sync_point_thunks.h"
+#include "third_party/mojo/public/platform/native/gles2_impl_chromium_sync_point_thunks.h"
 
 #include <assert.h>
 
-#include "mojo/public/platform/native/thunk_export.h"
+#include "third_party/mojo/public/platform/native/thunk_export.h"
 
 extern "C" {
 static MojoGLES2ImplChromiumSyncPointThunks g_impl_chromium_sync_point_thunks =
@@ -17,7 +17,7 @@ static MojoGLES2ImplChromiumSyncPointThunks g_impl_chromium_sync_point_thunks =
     assert(g_impl_chromium_sync_point_thunks.Function);            \
     return g_impl_chromium_sync_point_thunks.Function ARGUMENTS;   \
   }
-#include "mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
+#include "third_party/mojo/public/c/gles2/gles2_call_visitor_chromium_sync_point_autogen.h"
 #undef VISIT_GL_CALL
 
 extern "C" THUNK_EXPORT size_t MojoSetGLES2ImplChromiumSyncPointThunks(

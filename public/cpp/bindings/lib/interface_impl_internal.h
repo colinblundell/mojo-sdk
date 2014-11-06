@@ -5,13 +5,13 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_LIB_INTERFACE_IMPL_INTERNAL_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_LIB_INTERFACE_IMPL_INTERNAL_H_
 
-#include "mojo/public/cpp/bindings/error_handler.h"
-#include "mojo/public/cpp/bindings/interface_ptr.h"
-#include "mojo/public/cpp/bindings/lib/filter_chain.h"
-#include "mojo/public/cpp/bindings/lib/message_header_validator.h"
-#include "mojo/public/cpp/environment/environment.h"
-#include "mojo/public/cpp/environment/logging.h"
-#include "mojo/public/cpp/system/macros.h"
+#include "third_party/mojo/public/cpp/bindings/error_handler.h"
+#include "third_party/mojo/public/cpp/bindings/interface_ptr.h"
+#include "third_party/mojo/public/cpp/bindings/lib/filter_chain.h"
+#include "third_party/mojo/public/cpp/bindings/lib/message_header_validator.h"
+#include "third_party/mojo/public/cpp/environment/environment.h"
+#include "third_party/mojo/public/cpp/environment/logging.h"
+#include "third_party/mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 namespace internal {

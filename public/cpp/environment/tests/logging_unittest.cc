@@ -7,9 +7,9 @@
 #include <sstream>
 #include <string>
 
-#include "mojo/public/cpp/environment/environment.h"
-#include "mojo/public/cpp/environment/logging.h"
-#include "mojo/public/cpp/system/macros.h"
+#include "third_party/mojo/public/cpp/environment/environment.h"
+#include "third_party/mojo/public/cpp/environment/logging.h"
+#include "third_party/mojo/public/cpp/system/macros.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
 // A macro, so it can be automatically joined with other string literals. (Not

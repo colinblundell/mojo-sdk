@@ -5,8 +5,8 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_LIB_STRING_SERIALIZATION_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_LIB_STRING_SERIALIZATION_H_
 
-#include "mojo/public/cpp/bindings/lib/array_internal.h"
-#include "mojo/public/cpp/bindings/string.h"
+#include "third_party/mojo/public/cpp/bindings/lib/array_internal.h"
+#include "third_party/mojo/public/cpp/bindings/string.h"
 
 namespace mojo {
 

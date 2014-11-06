@@ -5,8 +5,8 @@
 #ifndef MOJO_PUBLIC_CPP_APPLICATION_LAZY_INTERFACE_PTR_H_
 #define MOJO_PUBLIC_CPP_APPLICATION_LAZY_INTERFACE_PTR_H_
 
-#include "mojo/public/cpp/application/connect.h"
-#include "mojo/public/interfaces/application/service_provider.mojom.h"
+#include "third_party/mojo/public/cpp/application/connect.h"
+#include "third_party/mojo/public/interfaces/application/service_provider.mojom.h"
 
 namespace mojo {
 

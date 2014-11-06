@@ -9,9 +9,9 @@
 #ifndef MOJO_PUBLIC_C_SYSTEM_MESSAGE_PIPE_H_
 #define MOJO_PUBLIC_C_SYSTEM_MESSAGE_PIPE_H_
 
-#include "mojo/public/c/system/macros.h"
-#include "mojo/public/c/system/system_export.h"
-#include "mojo/public/c/system/types.h"
+#include "third_party/mojo/public/c/system/macros.h"
+#include "third_party/mojo/public/c/system/system_export.h"
+#include "third_party/mojo/public/c/system/types.h"
 
 // |MojoCreateMessagePipeOptions|: Used to specify creation parameters for a
 // message pipe to |MojoCreateMessagePipe()|.

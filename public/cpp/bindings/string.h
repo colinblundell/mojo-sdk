@@ -7,9 +7,9 @@
 
 #include <string>
 
-#include "mojo/public/cpp/bindings/lib/array_internal.h"
-#include "mojo/public/cpp/bindings/type_converter.h"
-#include "mojo/public/cpp/environment/logging.h"
+#include "third_party/mojo/public/cpp/bindings/lib/array_internal.h"
+#include "third_party/mojo/public/cpp/bindings/type_converter.h"
+#include "third_party/mojo/public/cpp/environment/logging.h"
 
 namespace mojo {
 

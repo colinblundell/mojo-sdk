@@ -9,7 +9,7 @@
 
 #include <stddef.h>
 
-#include "mojo/public/c/system/core.h"
+#include "third_party/mojo/public/c/system/core.h"
 
 // The embedder needs to bind the basic Mojo Core functions of a DSO to those of
 // the embedder when loading a DSO that is dependent on mojo_system.

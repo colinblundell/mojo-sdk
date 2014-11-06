@@ -14,9 +14,9 @@
 
 #include <sstream>
 
-#include "mojo/public/c/environment/logger.h"
-#include "mojo/public/cpp/environment/environment.h"
-#include "mojo/public/cpp/system/macros.h"
+#include "third_party/mojo/public/c/environment/logger.h"
+#include "third_party/mojo/public/cpp/environment/environment.h"
+#include "third_party/mojo/public/cpp/system/macros.h"
 
 #define MOJO_LOG_STREAM(level)                                             \
   ::mojo::internal::LogMessage(__FILE__, __LINE__, MOJO_LOG_LEVEL_##level) \

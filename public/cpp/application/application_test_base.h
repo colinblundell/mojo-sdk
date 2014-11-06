@@ -5,9 +5,9 @@
 #ifndef MOJO_PUBLIC_CPP_APPLICATION_APPLICATION_TEST_BASE_H_
 #define MOJO_PUBLIC_CPP_APPLICATION_APPLICATION_TEST_BASE_H_
 
-#include "mojo/public/cpp/bindings/array.h"
-#include "mojo/public/cpp/bindings/string.h"
-#include "mojo/public/cpp/system/macros.h"
+#include "third_party/mojo/public/cpp/bindings/array.h"
+#include "third_party/mojo/public/cpp/bindings/string.h"
+#include "third_party/mojo/public/cpp/system/macros.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {

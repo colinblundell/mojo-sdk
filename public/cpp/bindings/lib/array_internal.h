@@ -8,16 +8,16 @@
 #include <new>
 #include <vector>
 
-#include "mojo/public/c/system/macros.h"
-#include "mojo/public/cpp/bindings/lib/bindings_internal.h"
-#include "mojo/public/cpp/bindings/lib/bindings_serialization.h"
-#include "mojo/public/cpp/bindings/lib/bounds_checker.h"
-#include "mojo/public/cpp/bindings/lib/buffer.h"
-#include "mojo/public/cpp/bindings/lib/map_data_internal.h"
-#include "mojo/public/cpp/bindings/lib/template_util.h"
-#include "mojo/public/cpp/bindings/lib/validate_params.h"
-#include "mojo/public/cpp/bindings/lib/validation_errors.h"
-#include "mojo/public/cpp/environment/logging.h"
+#include "third_party/mojo/public/c/system/macros.h"
+#include "third_party/mojo/public/cpp/bindings/lib/bindings_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/bindings_serialization.h"
+#include "third_party/mojo/public/cpp/bindings/lib/bounds_checker.h"
+#include "third_party/mojo/public/cpp/bindings/lib/buffer.h"
+#include "third_party/mojo/public/cpp/bindings/lib/map_data_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/template_util.h"
+#include "third_party/mojo/public/cpp/bindings/lib/validate_params.h"
+#include "third_party/mojo/public/cpp/bindings/lib/validation_errors.h"
+#include "third_party/mojo/public/cpp/environment/logging.h"
 
 namespace mojo {
 template <typename T>

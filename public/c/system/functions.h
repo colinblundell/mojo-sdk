@@ -11,8 +11,8 @@
 
 // Note: This header should be compilable as C.
 
-#include "mojo/public/c/system/system_export.h"
-#include "mojo/public/c/system/types.h"
+#include "third_party/mojo/public/c/system/system_export.h"
+#include "third_party/mojo/public/c/system/types.h"
 
 #ifdef __cplusplus
 extern "C" {

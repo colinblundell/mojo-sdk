@@ -7,8 +7,8 @@
 
 #include <map>
 
-#include "mojo/public/cpp/bindings/array.h"
-#include "mojo/public/cpp/bindings/lib/template_util.h"
+#include "third_party/mojo/public/cpp/bindings/array.h"
+#include "third_party/mojo/public/cpp/bindings/lib/template_util.h"
 
 namespace mojo {
 namespace internal {

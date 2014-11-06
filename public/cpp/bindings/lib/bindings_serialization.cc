@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "mojo/public/cpp/bindings/lib/bindings_serialization.h"
+#include "third_party/mojo/public/cpp/bindings/lib/bindings_serialization.h"
 
-#include "mojo/public/cpp/bindings/lib/bindings_internal.h"
-#include "mojo/public/cpp/bindings/lib/bounds_checker.h"
-#include "mojo/public/cpp/bindings/lib/validation_errors.h"
-#include "mojo/public/cpp/environment/logging.h"
+#include "third_party/mojo/public/cpp/bindings/lib/bindings_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/bounds_checker.h"
+#include "third_party/mojo/public/cpp/bindings/lib/validation_errors.h"
+#include "third_party/mojo/public/cpp/environment/logging.h"
 
 namespace mojo {
 namespace internal {

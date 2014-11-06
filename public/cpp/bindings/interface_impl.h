@@ -5,10 +5,10 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_INTERFACE_IMPL_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_INTERFACE_IMPL_H_
 
-#include "mojo/public/cpp/bindings/interface_request.h"
-#include "mojo/public/cpp/bindings/lib/interface_impl_internal.h"
-#include "mojo/public/cpp/environment/environment.h"
-#include "mojo/public/cpp/system/macros.h"
+#include "third_party/mojo/public/cpp/bindings/interface_request.h"
+#include "third_party/mojo/public/cpp/bindings/lib/interface_impl_internal.h"
+#include "third_party/mojo/public/cpp/environment/environment.h"
+#include "third_party/mojo/public/cpp/system/macros.h"
 
 namespace mojo {
 

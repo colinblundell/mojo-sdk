@@ -5,9 +5,9 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_CALLBACK_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_CALLBACK_H_
 
-#include "mojo/public/cpp/bindings/lib/callback_internal.h"
-#include "mojo/public/cpp/bindings/lib/shared_ptr.h"
-#include "mojo/public/cpp/bindings/lib/template_util.h"
+#include "third_party/mojo/public/cpp/bindings/lib/callback_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/shared_ptr.h"
+#include "third_party/mojo/public/cpp/bindings/lib/template_util.h"
 
 namespace mojo {
 

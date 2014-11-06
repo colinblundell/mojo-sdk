@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "mojo/public/cpp/application/service_provider_impl.h"
+#include "third_party/mojo/public/cpp/application/service_provider_impl.h"
 
-#include "mojo/public/cpp/application/lib/service_connector.h"
-#include "mojo/public/cpp/application/lib/weak_service_provider.h"
-#include "mojo/public/cpp/environment/logging.h"
+#include "third_party/mojo/public/cpp/application/lib/service_connector.h"
+#include "third_party/mojo/public/cpp/application/lib/weak_service_provider.h"
+#include "third_party/mojo/public/cpp/environment/logging.h"
 
 namespace mojo {
 

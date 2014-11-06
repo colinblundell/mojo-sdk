@@ -7,10 +7,10 @@
 
 #include <map>
 
-#include "mojo/public/cpp/bindings/lib/connector.h"
-#include "mojo/public/cpp/bindings/lib/filter_chain.h"
-#include "mojo/public/cpp/bindings/lib/shared_data.h"
-#include "mojo/public/cpp/environment/environment.h"
+#include "third_party/mojo/public/cpp/bindings/lib/connector.h"
+#include "third_party/mojo/public/cpp/bindings/lib/filter_chain.h"
+#include "third_party/mojo/public/cpp/bindings/lib/shared_data.h"
+#include "third_party/mojo/public/cpp/environment/environment.h"
 
 namespace mojo {
 namespace internal {

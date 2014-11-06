@@ -5,7 +5,7 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_INTERFACE_REQUEST_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_INTERFACE_REQUEST_H_
 
-#include "mojo/public/cpp/bindings/interface_ptr.h"
+#include "third_party/mojo/public/cpp/bindings/interface_ptr.h"
 
 namespace mojo {
 

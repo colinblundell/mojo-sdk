@@ -5,11 +5,11 @@
 #ifndef MOJO_PUBLIC_CPP_BINDINGS_LIB_MAP_SERIALIZATION_H_
 #define MOJO_PUBLIC_CPP_BINDINGS_LIB_MAP_SERIALIZATION_H_
 
-#include "mojo/public/cpp/bindings/lib/array_internal.h"
-#include "mojo/public/cpp/bindings/lib/map_data_internal.h"
-#include "mojo/public/cpp/bindings/lib/map_internal.h"
-#include "mojo/public/cpp/bindings/lib/string_serialization.h"
-#include "mojo/public/cpp/bindings/map.h"
+#include "third_party/mojo/public/cpp/bindings/lib/array_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/map_data_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/map_internal.h"
+#include "third_party/mojo/public/cpp/bindings/lib/string_serialization.h"
+#include "third_party/mojo/public/cpp/bindings/map.h"
 
 namespace mojo {
 
