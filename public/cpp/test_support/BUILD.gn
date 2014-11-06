@@ -9,7 +9,7 @@ source_set("test_utils") {
     "//base",
     "//third_party/mojo/public/c/test_support",
     "//third_party/mojo/public/cpp/system",
-    "//testing/gtest",
+    "//third_party/mojo/testing/gtest",
   ]
 
   sources = [

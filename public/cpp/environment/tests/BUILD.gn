@@ -17,6 +17,6 @@ test("mojo_public_environment_unittests") {
     "//third_party/mojo/public/cpp/system",
     "//third_party/mojo/public/cpp/test_support:test_utils",
     "//third_party/mojo/public/cpp/utility",
-    "//testing/gtest",
+    "//third_party/mojo/testing/gtest",
   ]
 }

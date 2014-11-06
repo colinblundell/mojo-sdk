@@ -58,7 +58,7 @@ source_set("test_support") {
     "//third_party/mojo/public/cpp/bindings",
     "//third_party/mojo/public/cpp/environment",
     "//third_party/mojo/public/cpp/system",
-    "//testing/gtest",
+    "//third_party/mojo/testing/gtest",
   ]
 }
 
