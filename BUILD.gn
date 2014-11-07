@@ -1,0 +1,4 @@
+import("//build/config/mojo.gni")
+config("mojo") {
+  include_dirs = [ mojo_root, root_gen_dir + mojo_root ]
+}
