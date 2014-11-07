@@ -4,6 +4,7 @@
 import("//build/config/mojo.gni")
 
 source_set("bindings") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "constants.cc",
     "constants.h",

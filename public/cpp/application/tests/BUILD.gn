@@ -14,5 +14,6 @@ test("mojo_public_application_unittests") {
     mojo_root + "mojo/testing/gtest",
   ]
 
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [ "service_registry_unittest.cc" ]
 }

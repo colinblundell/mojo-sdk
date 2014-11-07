@@ -9,6 +9,7 @@ source_set("system_thunks") {
     mojo_root + "mojo/public/c/system:for_shared_library",
   ]
 
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "system_thunks.h",
     "system_thunks.cc",
@@ -30,6 +31,7 @@ source_set("system_thunks") {
 source_set("gles2_thunks") {
   visibility = [ mojo_root + "mojo/public/gles2:for_shared_library" ]
 
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "gles2_thunks.cc",
     "gles2_thunks.h",

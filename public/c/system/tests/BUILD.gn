@@ -13,6 +13,7 @@ source_set("tests") {
     mojo_root + "mojo/testing/gtest",
   ]
 
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "core_unittest.cc",
     "core_unittest_pure_c.c",
@@ -24,6 +25,7 @@ source_set("tests") {
 test("perftests") {
   output_name = "mojo_public_system_perftests"
 
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "core_perftest.cc",
   ]

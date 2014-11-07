@@ -16,12 +16,14 @@ group("python") {
 # GYP version: mojo.gyp:mojo_python_system
 python_binary_module("system") {
   python_base_module = "mojo"
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "mojo/c_core.pxd",
     "mojo/c_environment.pxd",
     "mojo/system.pyx",
   ]
-  additional_sources = [
+  additional_public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+sources = [
     "src/python_system_helper.cc",
     "src/python_system_helper.h",
   ]
@@ -37,6 +39,7 @@ python_binary_module("system") {
 }
 
 copy("base") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "mojo/__init__.py",
   ]
@@ -47,6 +50,7 @@ copy("base") {
 
 # GYP version: mojo.gyp:mojo_python_bindings
 copy("bindings") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "mojo/bindings/__init__.py",
     "mojo/bindings/descriptor.py",

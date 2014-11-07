@@ -5,6 +5,7 @@ import("//build/config/mojo.gni")
 
 action_foreach("sky") {
   script = "convert_amd_modules_to_sky.py"
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     mojo_root + "mojo/public/js/bindings/buffer.js",
     mojo_root + "mojo/public/js/bindings/codec.js",

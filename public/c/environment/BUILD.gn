@@ -4,6 +4,7 @@
 import("//build/config/mojo.gni")
 
 source_set("environment") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "async_waiter.h",
     "logger.h",

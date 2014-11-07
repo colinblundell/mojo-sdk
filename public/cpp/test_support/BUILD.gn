@@ -13,6 +13,7 @@ source_set("test_utils") {
     mojo_root + "mojo/testing/gtest",
   ]
 
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "lib/test_support.cc",
     "lib/test_utils.cc",

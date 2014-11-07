@@ -8,6 +8,7 @@ import("//build/config/mojo.gni")
 # particular implementation, use the :for_component or
 # :for_shared_library targets, depending on the type of target you are.
 source_set("system") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "buffer.h",
     "core.h",

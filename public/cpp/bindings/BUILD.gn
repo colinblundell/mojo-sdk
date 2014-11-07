@@ -4,6 +4,7 @@
 import("//build/config/mojo.gni")
 
 source_set("bindings") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "array.h",
     "error_handler.h",
@@ -60,6 +61,7 @@ source_set("bindings") {
 }
 
 source_set("callback") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "callback.h",
     "lib/callback_internal.h",

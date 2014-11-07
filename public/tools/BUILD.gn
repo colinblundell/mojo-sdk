@@ -11,6 +11,7 @@ if (use_prebuilt_mojo_shell) {
     if (is_win) {
       filename += ".exe"
     }
+    public_configs = [ rebase_path("mojo", ".", mojo_root) ]
     sources = [ "prebuilt/$filename" ]
     outputs = [ "$root_out_dir/$filename" ]
   }

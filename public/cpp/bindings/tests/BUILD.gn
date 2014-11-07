@@ -5,6 +5,7 @@ import("//build/config/mojo.gni")
 
 # GYP version: mojo/mojo_base.gyp:mojo_public_bindings_unittests
 test("mojo_public_bindings_unittests") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "array_unittest.cc",
     "bounds_checker_unittest.cc",
@@ -39,6 +40,7 @@ test("mojo_public_bindings_unittests") {
 }
 
 source_set("mojo_public_bindings_test_utils") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "validation_test_input_parser.cc",
     "validation_test_input_parser.h",

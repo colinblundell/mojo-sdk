@@ -4,6 +4,7 @@
 import("//build/config/mojo.gni")
 
 source_set("utility") {
+  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
   sources = [
     "mutex.h",
     "run_loop.h",
