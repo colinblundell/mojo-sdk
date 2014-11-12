@@ -59,12 +59,3 @@ mkdir -p $GTEST_DIR
 git clone https://chromium.googlesource.com/external/googletest.git $GTEST_DIR
 cd $GTEST_DIR
 git checkout 4650552ff637bb44ecf7784060091cbed3252211 # from svn revision 692
-
-# Download and extract Cython.
-mkdir -p $THIRD_PARTY_DIR/cython
-cd $THIRD_PARTY_DIR/cython
-curl --remote-name http://cython.org/release/Cython-0.20.2.zip
-unzip Cython-0.20.2.zip
-rm -rf Cython-0.20.2.zip
-rm -rf src
-mv Cython-0.20.2 src
