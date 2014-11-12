@@ -7,7 +7,7 @@ import(rebase_path("mojo/public/tools/bindings/mojom.gni", ".", mojo_root))
 
 mojom("test_interfaces") {
   testonly = true
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+
   sources = [
     "math_calculator.mojom",
     "no_module.mojom",
