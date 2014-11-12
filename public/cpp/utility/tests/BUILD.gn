@@ -15,14 +15,8 @@ test("mojo_public_utility_unittests") {
 
   public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
+    "mutex_unittest.cc",
     "run_loop_unittest.cc",
+    "thread_unittest.cc",
   ]
-
-  # crbug.com/342893
-  if (!is_win) {
-    sources += [
-      "mutex_unittest.cc",
-      "thread_unittest.cc",
-    ]
-  }
 }
