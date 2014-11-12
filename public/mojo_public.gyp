@@ -23,7 +23,7 @@
       'type': 'none',
     },
     {
-      # GN version: //third_party/mojo/public/c/system
+      # GN version: //mojo/public/c/system
       'target_name': 'mojo_system',
       'type': 'static_library',
       'defines': [
@@ -62,7 +62,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/cpp/bindings
+      # GN version: //mojo/public/cpp/bindings
       'target_name': 'mojo_cpp_bindings',
       'type': 'static_library',
       'include_dirs': [
@@ -123,7 +123,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/js/bindings
+      # GN version: //mojo/public/js/bindings
       'target_name': 'mojo_js_bindings',
       'type': 'static_library',
       'include_dirs': [
@@ -135,13 +135,15 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/cpp/environment:standalone
+      # GN version: //mojo/public/cpp/environment:standalone
       'target_name': 'mojo_environment_standalone',
       'type': 'static_library',
       'sources': [
         'c/environment/async_waiter.h',
         'c/environment/logger.h',
+        'cpp/environment/async_waiter.h',
         'cpp/environment/environment.h',
+        'cpp/environment/lib/async_waiter.cc',
         'cpp/environment/lib/default_async_waiter.cc',
         'cpp/environment/lib/default_async_waiter.h',
         'cpp/environment/lib/default_logger.cc',
@@ -155,7 +157,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/cpp/utility
+      # GN version: //mojo/public/cpp/utility
       'target_name': 'mojo_utility',
       'type': 'static_library',
       'sources': [
@@ -186,16 +188,23 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/interfaces/application:application
+      'target_name': 'mojo_application_bindings_mojom',
+      'type': 'none',
+      'variables': {
+        'mojom_files': [
+          'interfaces/application/application.mojom',
+          'interfaces/application/service_provider.mojom',
+          'interfaces/application/shell.mojom',
+        ],
+      },
+      'includes': [ 'tools/bindings/mojom_bindings_generator_explicit.gypi' ],
+    },
+    {
+      # GN version: //mojo/public/interfaces/application:application
       'target_name': 'mojo_application_bindings',
       'type': 'static_library',
-      'sources': [
-        'interfaces/application/application.mojom',
-        'interfaces/application/service_provider.mojom',
-        'interfaces/application/shell.mojom',
-      ],
-      'includes': [ 'tools/bindings/mojom_bindings_generator.gypi' ],
       'dependencies': [
+        'mojo_application_bindings_mojom',
         'mojo_cpp_bindings',
       ],
       'export_dependent_settings': [
@@ -203,7 +212,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/cpp/application
+      # GN version: //mojo/public/cpp/application
       'target_name': 'mojo_application_base',
       'type': 'static_library',
       'sources': [
@@ -233,7 +242,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/cpp/application:standalone"
+      # GN version: //mojo/public/cpp/application:standalone"
       'target_name': 'mojo_application_standalone',
       'type': 'static_library',
       'sources': [
@@ -249,7 +258,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/c/test_support
+      # GN version: //mojo/public/c/test_support
       'target_name': 'mojo_test_support',
       'defines': [
         'MOJO_TEST_SUPPORT_IMPLEMENTATION',
@@ -284,7 +293,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/cpp/test_support:test_utils
+      # GN version: //mojo/public/cpp/test_support:test_utils
       'target_name': 'mojo_public_test_utils',
       'type': 'static_library',
       'dependencies': [
@@ -299,7 +308,7 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/cpp/bindings/tests:mojo_public_bindings_test_utils
+      # GN version: //mojo/public/cpp/bindings/tests:mojo_public_bindings_test_utils
       'target_name': 'mojo_public_bindings_test_utils',
       'type': 'static_library',
       'dependencies': [
@@ -311,28 +320,35 @@
       ],
     },
     {
-      # GN version: //third_party/mojo/public/interfaces/bindings/tests:test_interfaces
+      'target_name': 'mojo_public_test_interfaces_mojom',
+      'type': 'none',
+      'variables': {
+        'mojom_files': [
+          'interfaces/bindings/tests/math_calculator.mojom',
+          'interfaces/bindings/tests/no_module.mojom',
+          'interfaces/bindings/tests/rect.mojom',
+          'interfaces/bindings/tests/regression_tests.mojom',
+          'interfaces/bindings/tests/sample_factory.mojom',
+          'interfaces/bindings/tests/sample_import.mojom',
+          'interfaces/bindings/tests/sample_import2.mojom',
+          'interfaces/bindings/tests/sample_interfaces.mojom',
+          'interfaces/bindings/tests/sample_service.mojom',
+          'interfaces/bindings/tests/serialization_test_structs.mojom',
+          'interfaces/bindings/tests/test_structs.mojom',
+          'interfaces/bindings/tests/validation_test_interfaces.mojom',
+        ],
+      },
+      'includes': [ 'tools/bindings/mojom_bindings_generator_explicit.gypi' ],
+    },
+    {
+      # GN version: //mojo/public/interfaces/bindings/tests:test_interfaces
       'target_name': 'mojo_public_test_interfaces',
       'type': 'static_library',
-      'sources': [
-        'interfaces/bindings/tests/math_calculator.mojom',
-        'interfaces/bindings/tests/no_module.mojom',
-        'interfaces/bindings/tests/rect.mojom',
-        'interfaces/bindings/tests/regression_tests.mojom',
-        'interfaces/bindings/tests/sample_factory.mojom',
-        'interfaces/bindings/tests/sample_import.mojom',
-        'interfaces/bindings/tests/sample_import2.mojom',
-        'interfaces/bindings/tests/sample_interfaces.mojom',
-        'interfaces/bindings/tests/sample_service.mojom',
-        'interfaces/bindings/tests/serialization_test_structs.mojom',
-        'interfaces/bindings/tests/test_structs.mojom',
-        'interfaces/bindings/tests/validation_test_interfaces.mojom',
-      ],
-      'includes': [ 'tools/bindings/mojom_bindings_generator.gypi' ],
       'export_dependent_settings': [
         'mojo_cpp_bindings',
       ],
       'dependencies': [
+        'mojo_public_test_interfaces_mojom',
         'mojo_cpp_bindings',
       ],
     },
@@ -341,7 +357,7 @@
     ['OS == "android"', {
       'targets': [
         {
-          # GN version: //third_party/mojo/public/java_system
+          # GN version: //mojo/public/java_system
           'target_name': 'mojo_public_java',
           'type': 'none',
           'variables': {
@@ -350,7 +366,7 @@
           'includes': [ '../../build/java.gypi' ],
         },
         {
-        # GN version: //third_party/mojo/public/java_bindings
+        # GN version: //mojo/public/java_bindings
           'target_name': 'mojo_bindings_java',
           'type': 'none',
           'variables': {

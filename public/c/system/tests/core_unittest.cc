@@ -8,7 +8,7 @@
 
 #include <string.h>
 
-#include "mojo/testing/gtest/include/gtest/gtest.h"
+#include "testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace {

@@ -9,7 +9,7 @@
 #include "mojo/public/cpp/system/core.h"
 #include "mojo/public/cpp/test_support/test_utils.h"
 #include "mojo/public/cpp/utility/run_loop_handler.h"
-#include "mojo/testing/gtest/include/gtest/gtest.h"
+#include "testing/gtest/include/gtest/gtest.h"
 
 namespace mojo {
 namespace {

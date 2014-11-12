@@ -5,15 +5,15 @@ import("//build/config/mojo.gni")
 
 source_set("tests") {
   testonly = true
-  visibility = [ mojo_root + "mojo/public/cpp/system/tests:mojo_public_system_unittests" ]
+  visibility = [ rebase_path("mojo/public/cpp/system/tests:mojo_public_system_unittests", ".", mojo_root) ]
 
   deps = [
-    mojo_root + "mojo/public/c/environment",
-    mojo_root + "mojo/public/c/system",
-    mojo_root + "mojo/testing/gtest",
+    rebase_path("mojo/public/c/environment", ".", mojo_root),
+    rebase_path("mojo/public/c/system", ".", mojo_root),
+    rebase_path("testing/gtest", ".", mojo_third_party_root),
   ]
 
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "core_unittest.cc",
     "core_unittest_pure_c.c",
@@ -25,18 +25,18 @@ source_set("tests") {
 test("perftests") {
   output_name = "mojo_public_system_perftests"
 
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "core_perftest.cc",
   ]
 
   deps = [
     "//base",
-    mojo_root + "mojo/edk/test:run_all_perftests",
-    mojo_root + "mojo/public/c/environment",
-    mojo_root + "mojo/public/cpp/system",
-    mojo_root + "mojo/public/cpp/test_support:test_utils",
-    mojo_root + "mojo/public/cpp/utility",
-    mojo_root + "mojo/testing/gtest",
+    rebase_path("mojo/edk/test:run_all_perftests", ".", mojo_root),
+    rebase_path("mojo/public/c/environment", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    rebase_path("mojo/public/cpp/test_support:test_utils", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    rebase_path("testing/gtest", ".", mojo_third_party_root),
   ]
 }

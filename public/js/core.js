@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-// Module "mojo/public/js/bindings/core"
+// Module "mojo/public/js/core"
 //
 // Note: This file is for documentation purposes only. The code here is not
 // actually executed. The real module is implemented natively in Mojo.
@@ -111,6 +111,7 @@ var READ_DATA_FLAG_NONE;
 var READ_DATA_FLAG_ALL_OR_NONE;
 var READ_DATA_FLAG_DISCARD;
 var READ_DATA_FLAG_QUERY;
+var READ_DATA_FLAG_PEEK;
 
 /**
  * Closes the given |handle|. See MojoClose for more info.

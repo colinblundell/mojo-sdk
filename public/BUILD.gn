@@ -3,43 +3,51 @@
 # found in the LICENSE file.
 import("//build/config/mojo.gni")
 
+import(rebase_path("mojo/public/mojo.gni", ".", mojo_root))
+
 group("public") {
   # Meta-target, don't link into production code.
   testonly = true
   deps = [
     ":libmojo_sdk",
     ":sdk",
-    mojo_root + "mojo/public/cpp/application:standalone",
-    mojo_root + "mojo/public/cpp/bindings",
-    mojo_root + "mojo/public/cpp/environment:standalone",
-    mojo_root + "mojo/public/cpp/utility",
-    mojo_root + "mojo/public/interfaces/bindings/tests:test_interfaces",
-    mojo_root + "mojo/public/sky",
+    rebase_path("mojo/public/cpp/application:standalone", ".", mojo_root),
+    rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
+    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    rebase_path("mojo/public/interfaces/bindings/tests:test_interfaces", ".", mojo_root),
+    rebase_path("mojo/public/sky", ".", mojo_root),
   ]
 
   if (is_linux) {
     deps += [
-      mojo_root + "mojo/public/python",
+      rebase_path("mojo/public/python", ".", mojo_root),
+    ]
+  }
+
+  if (mojo_use_dart) {
+    deps += [
+      rebase_path("mojo/public/dart", ".", mojo_root),
     ]
   }
 
   if (is_android) {
     deps += [
-      mojo_root + "mojo/public/java:system",
-      mojo_root + "mojo/public/java:bindings",
+      rebase_path("mojo/public/java:system", ".", mojo_root),
+      rebase_path("mojo/public/java:bindings", ".", mojo_root),
     ]
   }
 }
 
 group("sdk") {
   deps = [
-    mojo_root + "mojo/public/c/system",
-    mojo_root + "mojo/public/cpp/application:standalone",
-    mojo_root + "mojo/public/cpp/bindings",
-    mojo_root + "mojo/public/cpp/environment:standalone",
-    mojo_root + "mojo/public/cpp/utility",
-    mojo_root + "mojo/public/interfaces/application",
-    mojo_root + "mojo/public/js/bindings",
+    rebase_path("mojo/public/c/system", ".", mojo_root),
+    rebase_path("mojo/public/cpp/application:standalone", ".", mojo_root),
+    rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
+    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    rebase_path("mojo/public/interfaces/application", ".", mojo_root),
+    rebase_path("mojo/public/js", ".", mojo_root),
   ]
 }
 

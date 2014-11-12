@@ -5,15 +5,15 @@ import("//build/config/mojo.gni")
 
 action_foreach("sky") {
   script = "convert_amd_modules_to_sky.py"
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
-    mojo_root + "mojo/public/js/bindings/buffer.js",
-    mojo_root + "mojo/public/js/bindings/codec.js",
-    mojo_root + "mojo/public/js/bindings/connection.js",
-    mojo_root + "mojo/public/js/bindings/connector.js",
-    mojo_root + "mojo/public/js/bindings/router.js",
-    mojo_root + "mojo/public/js/bindings/unicode.js",
-    mojo_root + "mojo/public/js/bindings/validator.js",
+    rebase_path("mojo/public/js/buffer.js", ".", mojo_root),
+    rebase_path("mojo/public/js/codec.js", ".", mojo_root),
+    rebase_path("mojo/public/js/connection.js", ".", mojo_root),
+    rebase_path("mojo/public/js/connector.js", ".", mojo_root),
+    rebase_path("mojo/public/js/router.js", ".", mojo_root),
+    rebase_path("mojo/public/js/unicode.js", ".", mojo_root),
+    rebase_path("mojo/public/js/validator.js", ".", mojo_root),
   ]
   outputs = [
     "$target_gen_dir/{{source_name_part}}.sky",

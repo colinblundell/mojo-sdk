@@ -15,20 +15,15 @@ import sys
 # Disable lint check for finding modules:
 # pylint: disable=F0401
 
-def _GetDirAbove(dirname):
-  """Returns the directory "above" this file containing |dirname| (which must
-  also be "above" this file)."""
-  path = os.path.abspath(__file__)
-  while True:
-    path, tail = os.path.split(path)
-    assert tail
-    if tail == dirname:
-      return path
-
 # Manually check for the command-line flag. (This isn't quite right, since it
 # ignores, e.g., "--", but it's close enough.)
-if "--use_chromium_bundled_pylibs" in sys.argv[1:]:
-  sys.path.insert(0, os.path.join(_GetDirAbove("mojo"), "third_party"))
+try:
+  index = sys.argv.index("--bundled_pylibs_root") + 1
+  bundled_pylibs_root = sys.argv[index]
+  sys.path.insert(0, bundled_pylibs_root)
+except ValueError:
+  pass
+
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 "pylib"))
@@ -177,8 +172,9 @@ def main():
   parser.add_argument("-I", dest="import_directories", action="append",
                       metavar="directory", default=[],
                       help="add a directory to be searched for import files")
-  parser.add_argument("--use_chromium_bundled_pylibs", action="store_true",
-                      help="use Python modules bundled in the Chromium source")
+  parser.add_argument("--bundled_pylibs_root", dest=bundled_pylibs_root,
+                      default=None,
+                      help="Directory storing bundled Python modules")
   (args, remaining_args) = parser.parse_known_args()
 
   generator_modules = LoadGenerators(args.generators_string)

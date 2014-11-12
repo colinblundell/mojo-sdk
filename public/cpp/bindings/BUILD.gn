@@ -4,7 +4,7 @@
 import("//build/config/mojo.gni")
 
 source_set("bindings") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "array.h",
     "error_handler.h",
@@ -55,13 +55,13 @@ source_set("bindings") {
 
   deps = [
     ":callback",
-    mojo_root + "mojo/public/cpp/environment",
-    mojo_root + "mojo/public/cpp/system",
+    rebase_path("mojo/public/cpp/environment", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
   ]
 }
 
 source_set("callback") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "callback.h",
     "lib/callback_internal.h",
@@ -70,5 +70,5 @@ source_set("callback") {
     "lib/shared_ptr.h",
   ]
 
-  deps = [ mojo_root + "mojo/public/cpp/system" ]
+  deps = [ rebase_path("mojo/public/cpp/system", ".", mojo_root) ]
 }

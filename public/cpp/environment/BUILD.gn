@@ -4,20 +4,25 @@
 import("//build/config/mojo.gni")
 
 source_set("environment") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
+    "async_waiter.h",
     "logging.h",
     "environment.h",
   ]
 
-  public_deps = [ mojo_root + "mojo/public/c/environment" ]
+  public_deps = [ rebase_path("mojo/public/c/environment", ".", mojo_root) ]
 
-  deps = [ mojo_root + "mojo/public/cpp/system" ]
+  deps = [
+    rebase_path("mojo/public/cpp/bindings:callback", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+  ]
 }
 
 source_set("standalone") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
+    "lib/async_waiter.cc",
     "lib/default_async_waiter.cc",
     "lib/default_async_waiter.h",
     "lib/default_logger.cc",
@@ -29,7 +34,7 @@ source_set("standalone") {
   public_deps = [ ":environment" ]
 
   deps = [
-    mojo_root + "mojo/public/c/environment",
-    mojo_root + "mojo/public/cpp/utility",
+    rebase_path("mojo/public/c/environment", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
   ]
 }

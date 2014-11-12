@@ -4,7 +4,7 @@
 import("//build/config/mojo.gni")
 
 source_set("utility") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "mutex.h",
     "run_loop.h",
@@ -19,8 +19,8 @@ source_set("utility") {
   ]
 
   deps = [
-    mojo_root + "mojo/public/cpp/bindings:callback",
-    mojo_root + "mojo/public/cpp/system",
+    rebase_path("mojo/public/cpp/bindings:callback", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
   ]
 
   if (is_win) {

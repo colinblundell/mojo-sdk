@@ -3,8 +3,8 @@
 # found in the LICENSE file.
 import("//build/config/mojo.gni")
 
-source_set("bindings") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+source_set("js") {
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "constants.cc",
     "constants.h",

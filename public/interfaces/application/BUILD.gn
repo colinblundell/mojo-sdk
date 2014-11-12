@@ -3,10 +3,11 @@
 # found in the LICENSE file.
 import("//build/config/mojo.gni")
 
-import(mojo_root + "mojo/public/tools/bindings/mojom.gni")
+import(rebase_path("mojo/public/tools/bindings/mojom.gni", ".", mojo_root))
 
 # GYP version: mojo/public/mojo_public.gyp:mojo_application_bindings
 mojom("application") {
+
   sources = [
     "application.mojom",
     "service_provider.mojom",

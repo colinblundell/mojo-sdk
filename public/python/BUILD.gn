@@ -3,7 +3,7 @@
 # found in the LICENSE file.
 import("//build/config/mojo.gni")
 
-import(mojo_root + "mojo/third_party/cython/rules.gni")
+import(rebase_path("third_party/cython/rules.gni", ".", mojo_third_party_root))
 
 group("python") {
   deps = [
@@ -16,30 +16,29 @@ group("python") {
 # GYP version: mojo.gyp:mojo_python_system
 python_binary_module("system") {
   python_base_module = "mojo"
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+
   sources = [
     "mojo/c_core.pxd",
     "mojo/c_environment.pxd",
     "mojo/system.pyx",
   ]
-  additional_public_configs = [ rebase_path("mojo", ".", mojo_root) ]
-sources = [
+  additional_sources = [
     "src/python_system_helper.cc",
     "src/python_system_helper.h",
   ]
   deps = [
-    mojo_root + "mojo/public/c/environment",
-    mojo_root + "mojo/public/c/system:for_shared_library",
-    mojo_root + "mojo/public/cpp/environment:standalone",
-    mojo_root + "mojo/public/cpp/system",
-    mojo_root + "mojo/public/cpp/utility",
-    mojo_root + "mojo/public/cpp/bindings:callback",
+    rebase_path("mojo/public/c/environment", ".", mojo_root),
+    rebase_path("mojo/public/c/system:for_shared_library", ".", mojo_root),
+    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    rebase_path("mojo/public/cpp/bindings:callback", ".", mojo_root),
     ":base",
   ]
 }
 
 copy("base") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+
   sources = [
     "mojo/__init__.py",
   ]
@@ -50,7 +49,7 @@ copy("base") {
 
 # GYP version: mojo.gyp:mojo_python_bindings
 copy("bindings") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+
   sources = [
     "mojo/bindings/__init__.py",
     "mojo/bindings/descriptor.py",

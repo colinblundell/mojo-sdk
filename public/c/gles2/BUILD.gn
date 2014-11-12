@@ -8,15 +8,14 @@ config("gles2_config") {
 }
 
 source_set("gles2") {
-  public_configs = [ ":gles2_config", rebase_path("mojo", ".", mojo_root) ]
-
+  public_configs = [ ":gles2_config", rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "gles2.h",
     "gles2_export.h",
   ]
 
-    public_deps = [
-    mojo_root + "mojo/public/c/environment",
-    mojo_root + "mojo/public/c/system",
+  public_deps = [
+    rebase_path("mojo/public/c/environment", ".", mojo_root),
+    rebase_path("mojo/public/c/system", ".", mojo_root),
   ]
 }

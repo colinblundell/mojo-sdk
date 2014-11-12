@@ -6,17 +6,23 @@ import("//build/config/mojo.gni")
 # GYP version: mojo/mojo_base.gyp:mojo_public_utility_unittests
 test("mojo_public_utility_unittests") {
   deps = [
-    mojo_root + "mojo/edk/test:run_all_unittests",
-    mojo_root + "mojo/public/cpp/system",
-    mojo_root + "mojo/public/cpp/test_support:test_utils",
-    mojo_root + "mojo/public/cpp/utility",
-    mojo_root + "mojo/testing/gtest",
+    rebase_path("mojo/edk/test:run_all_unittests", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    rebase_path("mojo/public/cpp/test_support:test_utils", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    rebase_path("testing/gtest", ".", mojo_third_party_root),
   ]
 
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
-    "mutex_unittest.cc",
     "run_loop_unittest.cc",
-    "thread_unittest.cc",
   ]
+
+  # crbug.com/342893
+  if (!is_win) {
+    sources += [
+      "mutex_unittest.cc",
+      "thread_unittest.cc",
+    ]
+  }
 }

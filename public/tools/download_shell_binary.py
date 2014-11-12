@@ -41,7 +41,7 @@ def download():
   platform = "linux-x64" # TODO: configurate
   basename = platform + ".zip"
 
-  gs_path = "gs://third_party/mojo/shell/" + version + "/" + basename
+  gs_path = "gs://mojo/shell/" + version + "/" + basename
 
   with tempfile.NamedTemporaryFile() as temp_zip_file:
     subprocess.check_call([gsutil_exe, "--bypass_prodaccess",

@@ -5,7 +5,7 @@ import("//build/config/mojo.gni")
 
 # GYP version: mojo/mojo_base.gyp:mojo_public_bindings_unittests
 test("mojo_public_bindings_unittests") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "array_unittest.cc",
     "bounds_checker_unittest.cc",
@@ -27,26 +27,26 @@ test("mojo_public_bindings_unittests") {
   ]
 
   deps = [
-    mojo_root + "mojo/edk/test:run_all_unittests",
-    mojo_root + "mojo/public/cpp/bindings",
-    mojo_root + "mojo/public/cpp/environment:standalone",
-    mojo_root + "mojo/public/cpp/system",
-    mojo_root + "mojo/public/cpp/test_support:test_utils",
-    mojo_root + "mojo/public/cpp/utility",
-    mojo_root + "mojo/public/interfaces/bindings/tests:test_interfaces",
-    mojo_root + "mojo/testing/gtest",
+    rebase_path("mojo/edk/test:run_all_unittests", ".", mojo_root),
+    rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
+    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    rebase_path("mojo/public/cpp/test_support:test_utils", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    rebase_path("mojo/public/interfaces/bindings/tests:test_interfaces", ".", mojo_root),
+    rebase_path("testing/gtest", ".", mojo_third_party_root),
     ":mojo_public_bindings_test_utils",
   ]
 }
 
 source_set("mojo_public_bindings_test_utils") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "validation_test_input_parser.cc",
     "validation_test_input_parser.h",
   ]
 
   deps = [
-    mojo_root + "mojo/public/c/system",
+    rebase_path("mojo/public/c/system", ".", mojo_root),
   ]
 }

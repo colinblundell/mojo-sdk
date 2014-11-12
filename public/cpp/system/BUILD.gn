@@ -4,7 +4,7 @@
 import("//build/config/mojo.gni")
 
 source_set("system") {
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "buffer.h",
     "core.h",
@@ -15,5 +15,5 @@ source_set("system") {
     "message_pipe.h"
   ]
 
-  public_deps = [ mojo_root + "mojo/public/c/system" ]
+  public_deps = [ rebase_path("mojo/public/c/system", ".", mojo_root) ]
 }

@@ -5,17 +5,17 @@ import("//build/config/mojo.gni")
 
 source_set("system_thunks") {
   visibility = [
-    mojo_root + "mojo/public/c/system:for_component",
-    mojo_root + "mojo/public/c/system:for_shared_library",
+    rebase_path("mojo/public/c/system:for_component", ".", mojo_root),
+    rebase_path("mojo/public/c/system:for_shared_library", ".", mojo_root),
   ]
 
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "system_thunks.h",
     "system_thunks.cc",
   ]
   defines = [ "MOJO_SYSTEM_IMPLEMENTATION" ]
-  deps = [ mojo_root + "mojo/public/c/system" ]
+  deps = [ rebase_path("mojo/public/c/system", ".", mojo_root) ]
 
   # The GYP target analogous to this one builds this code into a
   # static library.  When building for Android, both the GYP and GN
@@ -29,9 +29,9 @@ source_set("system_thunks") {
 
 # GYP version: mojo/mojo_public_gles2_for_loadable_module.gypi
 source_set("gles2_thunks") {
-  visibility = [ mojo_root + "mojo/public/gles2:for_shared_library" ]
+  visibility = [ rebase_path("mojo/public/gles2:for_shared_library", ".", mojo_root) ]
 
-  public_configs = [ rebase_path("mojo", ".", mojo_root) ]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "gles2_thunks.cc",
     "gles2_thunks.h",
@@ -47,12 +47,12 @@ source_set("gles2_thunks") {
     "MOJO_GLES2_IMPLEMENTATION",
   ]
 
-  configs += [ mojo_root + "mojo/third_party/khronos:khronos_headers" ]
+  configs += [ rebase_path("third_party/khronos:khronos_headers", ".", mojo_third_party_root) ]
 
   deps = [
-    mojo_root + "mojo/public/c/gles2",
-    mojo_root + "mojo/public/c/environment",
-    mojo_root + "mojo/public/c/system",
+    rebase_path("mojo/public/c/gles2", ".", mojo_root),
+    rebase_path("mojo/public/c/environment", ".", mojo_root),
+    rebase_path("mojo/public/c/system", ".", mojo_root),
   ]
 
   if (is_mac) {
