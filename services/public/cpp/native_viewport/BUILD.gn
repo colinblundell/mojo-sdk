@@ -1,0 +1,13 @@
+# Copyright 2014 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/config/mojo.gni")
+
+source_set("args") {
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  sources = [
+    "lib/args.cc",
+    "args.h",
+  ]
+}

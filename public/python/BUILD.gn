@@ -18,7 +18,6 @@ group("python") {
 python_binary_module("system") {
   python_base_module = "mojo"
 
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "mojo/c_core.pxd",
     "mojo/c_environment.pxd",
