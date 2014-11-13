@@ -1,6 +1,7 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+
 import("//build/config/mojo.gni")
 
 # In an is_component_build build, everything can link against //mojo/gles2
@@ -20,7 +21,7 @@ group("for_shared_library") {
   public_deps = [ rebase_path("mojo/public/c/gles2", ".", mojo_root) ]
 
   if (is_component_build) {
-    deps = [ rebase_path("mojo/gles2", ".", mojo_root) ]
+    deps = [ "//mojo/gles2" ]
   } else {
     deps = [ rebase_path("mojo/public/platform/native:gles2_thunks", ".", mojo_root) ]
   }
@@ -31,6 +32,6 @@ group("for_component") {
   public_deps = [ rebase_path("mojo/public/c/gles2", ".", mojo_root) ]
 
   if (is_component_build) {
-    deps = [ rebase_path("mojo/gles2", ".", mojo_root) ]
+    deps = [ "//mojo/gles2" ]
   }
 }

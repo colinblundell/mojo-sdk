@@ -1,6 +1,7 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+
 import("//build/config/mojo.gni")
 
 # GYP version: mojo/mojo_base.gyp:mojo_public_environment_unittests
@@ -14,7 +15,7 @@ test("mojo_public_environment_unittests") {
   ]
 
   deps = [
-    rebase_path("mojo/edk/test:run_all_unittests", ".", mojo_root),
+    "//mojo/edk/test:run_all_unittests",
     rebase_path("mojo/public/c/environment", ".", mojo_root),
     rebase_path("mojo/public/cpp/bindings:callback", ".", mojo_root),
     rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),

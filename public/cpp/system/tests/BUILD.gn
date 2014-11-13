@@ -1,12 +1,13 @@
 # Copyright 2014 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
+
 import("//build/config/mojo.gni")
 
 # GYP version: mojo/mojo_base.gyp:mojo_public_system_unittests
 test("mojo_public_system_unittests") {
   deps = [
-    rebase_path("mojo/edk/test:run_all_unittests", ".", mojo_root),
+    "//mojo/edk/test:run_all_unittests",
     rebase_path("mojo/public/c/system/tests", ".", mojo_root),
     rebase_path("mojo/public/cpp/system", ".", mojo_root),
     rebase_path("mojo/public/cpp/test_support:test_utils", ".", mojo_root),
