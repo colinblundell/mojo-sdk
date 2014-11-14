@@ -124,6 +124,7 @@ template("mojom") {
       "--bundled_pylibs_root", rebase_path(mojo_third_party_root + "third_party/", root_build_dir),
       "-d", rebase_path("//", root_build_dir),
       "-I", rebase_path(mojo_root, root_build_dir),
+      "-I", rebase_path(mojo_services_root, root_build_dir),
       "-I", rebase_path("//", root_build_dir),
       "-o", rebase_path(root_gen_dir),
     ]
