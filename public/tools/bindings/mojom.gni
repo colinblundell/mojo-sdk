@@ -19,6 +19,12 @@ import("//build/config/mojo.gni")
 #   public_deps (optional)
 #       Note: this can contain only other mojom targets.
 #
+#   configs (optional)
+#       Note: this can contain only other mojom targets.
+#
+#   public_configs (optional)
+#       Note: this can contain only other mojom targets.
+#
 #   testonly (optional)
 #
 #   visibility (optional)
@@ -148,6 +154,12 @@ template("mojom") {
     }
     if (defined(invoker.public_deps)) {
       public_deps = invoker.public_deps
+    }
+    if (defined(invoker.configs)) {
+      configs += invoker.configs
+    }
+    if (defined(invoker.public_configs)) {
+      public_configs = invoker.public_configs
     }
   }
 
