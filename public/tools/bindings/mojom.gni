@@ -20,10 +20,11 @@ import("//build/config/mojo.gni")
 #       Note: this can contain only other mojom targets.
 #
 #   configs (optional)
-#       Note: this can contain only other mojom targets.
 #
 #   public_configs (optional)
-#       Note: this can contain only other mojom targets.
+#
+#   mojom_import_dirs (optional)
+#       List of directories that will be searched for imported mojom files.
 #
 #   testonly (optional)
 #
@@ -129,11 +130,15 @@ template("mojom") {
       "{{source}}",
       "--bundled_pylibs_root", rebase_path(mojo_third_party_root + "third_party/", root_build_dir),
       "-d", rebase_path("//", root_build_dir),
-      "-I", rebase_path(mojo_root, root_build_dir),
-      "-I", rebase_path(mojo_services_root, root_build_dir),
       "-I", rebase_path("//", root_build_dir),
       "-o", rebase_path(root_gen_dir),
     ]
+
+    if (defined(mojom_import_dirs)) {
+      foreach(d, mojom_import_dirs) {
+        args += ["-I", rebase_path(d, root_build_dir)]
+      }
+    }
   }
 
   source_set(target_name) {
