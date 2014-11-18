@@ -70,11 +70,13 @@ source_set("test_support") {
 source_set("test_support_standalone") {
   testonly = true
   public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
-  sources = [ "lib/application_test_main.cc", ]
-  public_deps = [ ":test_support", ]
+  sources = [ "lib/application_test_main.cc" ]
+
+  public_deps = [ ":test_support" ]
   deps = [
+    ":application",
     rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/application", ".", mojo_root),
     rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
   ]
 }

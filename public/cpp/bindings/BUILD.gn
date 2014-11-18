@@ -8,12 +8,14 @@ source_set("bindings") {
   public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "array.h",
+    "binding.h",
     "error_handler.h",
     "interface_ptr.h",
     "map.h",
     "message.h",
     "message_filter.h",
     "no_interface.h",
+    "strong_binding.h",
     "string.h",
     "struct_ptr.h",
     "type_converter.h",

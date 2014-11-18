@@ -5,8 +5,49 @@
 import("//build/config/mojo.gni")
 
 group("dart") {
+  testonly = true
   deps = [
+    ":core",
     ":bindings",
+  ]
+}
+
+
+group("core") {
+  deps = [
+    ":mojo_dart_core",
+    ":copy_core_library",
+  ]
+}
+
+
+shared_library("mojo_dart_core") {
+  defines = ["DART_SHARED_LIB"]
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  sources = [
+    "src/mojo_dart_core.cc",
+  ]
+  deps = [
+    rebase_path("mojo/public/c/environment", ".", mojo_root),
+    rebase_path("mojo/public/c/system:for_shared_library", ".", mojo_root),
+    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
+    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    rebase_path("mojo/public/cpp/bindings:callback", ".", mojo_root),
+  ]
+}
+
+
+copy("copy_core_library") {
+  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  sources = [
+    "$root_out_dir/libmojo_dart_core.so",
+  ]
+  outputs = [
+    "$root_out_dir/gen/mojo/public/dart/src/libmojo_dart_core.so"
+  ]
+  deps =[
+    ":mojo_dart_core"
   ]
 }
 
@@ -15,7 +56,15 @@ copy("bindings") {
   public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
   sources = [
     "bindings.dart",
+    "core.dart",
+    "mojo_init.dart",
+    "src/buffer.dart",
     "src/codec.dart",
+    "src/data_pipe.dart",
+    "src/handle.dart",
+    "src/handle_watcher.dart",
+    "src/message_pipe.dart",
+    "src/types.dart",
   ]
   outputs = [
     "{{source_gen_dir}}/{{source_file_part}}"

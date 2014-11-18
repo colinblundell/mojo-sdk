@@ -70,6 +70,7 @@
       ],
       'sources': [
         'cpp/bindings/array.h',
+        'cpp/bindings/binding.h',
         'cpp/bindings/callback.h',
         'cpp/bindings/error_handler.h',
         'cpp/bindings/interface_impl.h',
@@ -79,6 +80,7 @@
         'cpp/bindings/message_filter.h',
         'cpp/bindings/no_interface.h',
         'cpp/bindings/string.h',
+        'cpp/bindings/strong_binding.h',
         'cpp/bindings/type_converter.h',
         'cpp/bindings/lib/array_internal.h',
         'cpp/bindings/lib/array_internal.cc',
@@ -96,7 +98,6 @@
         'cpp/bindings/lib/filter_chain.h',
         'cpp/bindings/lib/fixed_buffer.cc',
         'cpp/bindings/lib/fixed_buffer.h',
-        'cpp/bindings/lib/interface_impl_internal.h',
         'cpp/bindings/lib/interface_ptr_internal.h',
         'cpp/bindings/lib/map_data_internal.h',
         'cpp/bindings/lib/map_internal.h',
@@ -123,15 +124,15 @@
       ],
     },
     {
-      # GN version: //mojo/public/js/bindings
+      # GN version: //mojo/public/js
       'target_name': 'mojo_js_bindings',
       'type': 'static_library',
       'include_dirs': [
         '../..'
       ],
       'sources': [
-        'js/bindings/constants.cc',
-        'js/bindings/constants.h',
+        'js/constants.cc',
+        'js/constants.h',
       ],
     },
     {
@@ -236,9 +237,11 @@
       ],
       'dependencies': [
         'mojo_application_bindings',
+        'mojo_application_bindings_mojom',
       ],
       'export_dependent_settings': [
         'mojo_application_bindings',
+        'mojo_application_bindings_mojom',
       ],
     },
     {
