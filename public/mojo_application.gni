@@ -2,7 +2,9 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//mojo/public/mojo.gni")
+import("//build/config/mojo.gni")
+
+import(rebase_path("mojo/public/mojo.gni", ".", mojo_root))
 
 # Generate a binary mojo application.The parameters of this template are those
 # of a shared library.
@@ -62,11 +64,11 @@ template("mojo_native_application") {
     if (defined(invoker.datadeps)) {
       datadeps = invoker.datadeps
       if (use_prebuilt_mojo_shell) {
-        datadeps += [ "//mojo/public/tools:copy_mojo_shell" ]
+        datadeps += [ rebase_path("mojo/public/tools:copy_mojo_shell", ".", mojo_root) ]
       }
     } else {
       if (use_prebuilt_mojo_shell) {
-        datadeps = [ "//mojo/public/tools:copy_mojo_shell" ]
+        datadeps = [ rebase_path("mojo/public/tools:copy_mojo_shell", ".", mojo_root) ]
       }
     }
     if (defined(invoker.deps)) {
