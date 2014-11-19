@@ -131,11 +131,11 @@ template("mojom") {
       "-I", rebase_path("//", root_build_dir),
       "-o", rebase_path(root_gen_dir),
     ]
-  }
 
-  if (defined(mojom_import_dirs)) {
-    foreach(d, mojom_import_dirs) {
-      args += ["-I", rebase_path(d, root_build_dir)]
+    if (defined(mojom_import_dirs)) {
+      foreach(d, mojom_import_dirs) {
+        args += ["-I", rebase_path(d, root_build_dir)]
+      }
     }
   }
 
