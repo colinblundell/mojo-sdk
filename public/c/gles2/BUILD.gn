@@ -2,21 +2,23 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 config("gles2_config") {
   defines = [ "GLES2_USE_MOJO" ]
 }
 
 source_set("gles2") {
-  public_configs = [ ":gles2_config", rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [
+    ":gles2_config",
+    "../../../build/config:mojo_sdk"
+  ]
+
   sources = [
     "gles2.h",
     "gles2_export.h",
   ]
 
   public_deps = [
-    rebase_path("mojo/public/c/environment", ".", mojo_root),
-    rebase_path("mojo/public/c/system", ".", mojo_root),
+    "../environment",
+    "../system",
   ]
 }

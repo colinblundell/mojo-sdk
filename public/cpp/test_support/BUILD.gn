@@ -2,19 +2,17 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 # GYP version: mojo/public/mojo_public.gyp:mojo_public_test_utils
 source_set("test_utils") {
   testonly = true
   deps = [
+    "../../c/test_support",
+    "../system",
     "//base",
-    rebase_path("mojo/public/c/test_support", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
-    rebase_path("testing/gtest", ".", mojo_third_party_root),
+    "//testing/gtest",
   ]
 
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "lib/test_support.cc",
     "lib/test_utils.cc",

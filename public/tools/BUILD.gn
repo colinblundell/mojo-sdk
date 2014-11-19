@@ -2,9 +2,7 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
-import(rebase_path("mojo/public/mojo.gni", ".", mojo_root))
+import("../mojo.gni")
 
 if (use_prebuilt_mojo_shell) {
   copy("copy_mojo_shell") {
@@ -12,7 +10,6 @@ if (use_prebuilt_mojo_shell) {
     if (is_win) {
       filename += ".exe"
     }
-    public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
     sources = [ "prebuilt/$filename" ]
     outputs = [ "$root_out_dir/$filename" ]
   }

@@ -2,9 +2,7 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
-import(rebase_path("mojo/public/mojo.gni", ".", mojo_root))
+import("mojo.gni")
 
 group("public") {
   # Meta-target, don't link into production code.
@@ -12,43 +10,43 @@ group("public") {
   deps = [
     ":libmojo_sdk",
     ":sdk",
-    rebase_path("mojo/public/cpp/application:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
-    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
-    rebase_path("mojo/public/interfaces/bindings/tests:test_interfaces", ".", mojo_root),
-    rebase_path("mojo/public/sky", ".", mojo_root),
+    "cpp/application:standalone",
+    "cpp/bindings",
+    "cpp/environment:standalone",
+    "cpp/utility",
+    "interfaces/bindings/tests:test_interfaces",
+    "sky",
   ]
 
   if (is_linux) {
     deps += [
-      rebase_path("mojo/public/python", ".", mojo_root),
+      "python",
     ]
   }
 
   if (mojo_use_dart) {
     deps += [
-      rebase_path("mojo/public/dart", ".", mojo_root),
+      "dart",
     ]
   }
 
   if (is_android) {
     deps += [
-      rebase_path("mojo/public/java:system", ".", mojo_root),
-      rebase_path("mojo/public/java:bindings", ".", mojo_root),
+      "java:system",
+      "java:bindings",
     ]
   }
 }
 
 group("sdk") {
   deps = [
-    rebase_path("mojo/public/c/system", ".", mojo_root),
-    rebase_path("mojo/public/cpp/application:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
-    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
-    rebase_path("mojo/public/interfaces/application", ".", mojo_root),
-    rebase_path("mojo/public/js", ".", mojo_root),
+    "c/system",
+    "cpp/application:standalone",
+    "cpp/bindings",
+    "cpp/environment:standalone",
+    "cpp/utility",
+    "interfaces/application",
+    "js",
   ]
 }
 

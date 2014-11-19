@@ -2,26 +2,24 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 source_set("environment") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "async_waiter.h",
     "logging.h",
     "environment.h",
   ]
 
-  public_deps = [ rebase_path("mojo/public/c/environment", ".", mojo_root) ]
+  public_deps = [ "../../c/environment" ]
 
   deps = [
-    rebase_path("mojo/public/cpp/bindings:callback", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    "../bindings:callback",
+    "../system",
   ]
 }
 
 source_set("standalone") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "lib/async_waiter.cc",
     "lib/default_async_waiter.cc",
@@ -35,7 +33,7 @@ source_set("standalone") {
   public_deps = [ ":environment" ]
 
   deps = [
-    rebase_path("mojo/public/c/environment", ".", mojo_root),
-    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    "../../c/environment",
+    "../utility",
   ]
 }

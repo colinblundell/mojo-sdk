@@ -2,8 +2,6 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 # Generate C++ and JavaScript source files from mojom files. The output files
 # will go under the generated file directory tree with the same path as each
 # input file.
@@ -30,7 +28,7 @@ template("mojom") {
   assert(defined(invoker.sources),
          "\"sources\" must be defined for the $target_name template.")
 
-  generator_root = rebase_path("mojo/public/tools/bindings", ".", mojo_root)
+  generator_root = "//mojo/public/tools/bindings"
   generator_script = "$generator_root/mojom_bindings_generator.py"
   generator_sources = [
     generator_script,
@@ -125,19 +123,11 @@ template("mojom") {
               generator_python_outputs
     args = [
       "{{source}}",
-      "--bundled_pylibs_root", rebase_path(mojo_third_party_root + "third_party/", root_build_dir),
+      "--use_chromium_bundled_pylibs",
       "-d", rebase_path("//", root_build_dir),
       "-I", rebase_path("//", root_build_dir),
       "-o", rebase_path(root_gen_dir),
     ]
-
-    # The user might have specified additional mojom import dirs in
-    # //build/config/mojo.gni.
-    if (defined(mojom_import_dirs)) {
-      foreach(d, mojom_import_dirs) {
-        args += ["-I", rebase_path(d, root_build_dir)]
-      }
-    }
   }
 
   source_set(target_name) {
@@ -151,7 +141,7 @@ template("mojom") {
     data = process_file_template(invoker.sources, generator_js_outputs)
     deps = [
       ":$generator_target_name",
-      rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
+      "//mojo/public/cpp/bindings",
     ]
     if (defined(invoker.deps)) {
       deps += invoker.deps
@@ -195,8 +185,8 @@ template("mojom") {
     java_target_name = target_name + "_java"
     android_library(java_target_name) {
       deps = [
-        rebase_path("mojo/public/java:bindings", ".", mojo_root),
-        rebase_path("mojo/public/java:system", ".", mojo_root),
+        "//mojo/public/java:bindings",
+        "//mojo/public/java:system",
       ]
 
       foreach(d, all_deps) {

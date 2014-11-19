@@ -2,11 +2,9 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 # GYP version: mojo/mojo_base.gyp:mojo_public_environment_unittests
 test("mojo_public_environment_unittests") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../../build/config:mojo_sdk" ]
   sources = [
     "async_wait_unittest.cc",
     "async_waiter_unittest.cc",
@@ -15,13 +13,13 @@ test("mojo_public_environment_unittests") {
   ]
 
   deps = [
+    "../../bindings:callback",
+    "../../environment:standalone",
+    "../../system",
+    "../../test_support:test_utils",
+    "../../utility",
+    "../../../c/environment",
     "//mojo/edk/test:run_all_unittests",
-    rebase_path("mojo/public/c/environment", ".", mojo_root),
-    rebase_path("mojo/public/cpp/bindings:callback", ".", mojo_root),
-    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
-    rebase_path("mojo/public/cpp/test_support:test_utils", ".", mojo_root),
-    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
-    rebase_path("testing/gtest", ".", mojo_third_party_root),
+    "//testing/gtest",
   ]
 }

@@ -2,11 +2,9 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 # GYP version: mojo/public/mojo_public.gyp:mojo_application_base
 source_set("application") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "application_connection.h",
     "application_delegate.h",
@@ -28,16 +26,16 @@ source_set("application") {
   ]
 
   deps = [
-    rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
-    rebase_path("mojo/public/cpp/environment", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
-    rebase_path("mojo/public/interfaces/application", ".", mojo_root),
+    "../bindings",
+    "../environment",
+    "../system",
+    "../../interfaces/application",
   ]
 }
 
 # GYP version: mojo/public/mojo_public.gyp:mojo_application_standalone
 source_set("standalone") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "lib/application_runner.cc"
   ]
@@ -45,14 +43,14 @@ source_set("standalone") {
   public_deps = [ ":application" ]
 
   deps = [
-    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    "../environment:standalone",
+    "../utility",
   ]
 }
 
 source_set("test_support") {
   testonly = true
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "application_test_base.h",
     "lib/application_test_base.cc",
@@ -60,23 +58,23 @@ source_set("test_support") {
 
   deps = [
     ":application",
-    rebase_path("mojo/public/cpp/bindings", ".", mojo_root),
-    rebase_path("mojo/public/cpp/environment", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
-    rebase_path("testing/gtest", ".", mojo_third_party_root),
+    "../bindings",
+    "../environment",
+    "../system",
+    "//testing/gtest",
   ]
 }
 
 source_set("test_support_standalone") {
   testonly = true
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [ "lib/application_test_main.cc" ]
 
   public_deps = [ ":test_support" ]
   deps = [
     ":application",
-    rebase_path("mojo/public/cpp/environment:standalone", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
-    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
+    "../environment:standalone",
+    "../system",
+    "../utility",
   ]
 }

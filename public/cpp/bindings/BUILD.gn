@@ -2,10 +2,8 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 source_set("bindings") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "array.h",
     "binding.h",
@@ -58,13 +56,13 @@ source_set("bindings") {
 
   deps = [
     ":callback",
-    rebase_path("mojo/public/cpp/environment", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
+    "../environment",
+    "../system",
   ]
 }
 
 source_set("callback") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "callback.h",
     "lib/callback_internal.h",
@@ -73,5 +71,5 @@ source_set("callback") {
     "lib/shared_ptr.h",
   ]
 
-  deps = [ rebase_path("mojo/public/cpp/system", ".", mojo_root) ]
+  deps = [ "../system" ]
 }

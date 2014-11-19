@@ -2,19 +2,17 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 source_set("tests") {
   testonly = true
-  visibility = [ rebase_path("mojo/public/cpp/system/tests:mojo_public_system_unittests", ".", mojo_root) ]
+  visibility = [ "../../../cpp/system/tests:mojo_public_system_unittests" ]
 
   deps = [
-    rebase_path("mojo/public/c/environment", ".", mojo_root),
-    rebase_path("mojo/public/c/system", ".", mojo_root),
-    rebase_path("testing/gtest", ".", mojo_third_party_root),
+    "../../environment",
+    "../../system",
+    "//testing/gtest",
   ]
 
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../../build/config:mojo_sdk" ]
   sources = [
     "core_unittest.cc",
     "core_unittest_pure_c.c",
@@ -26,18 +24,18 @@ source_set("tests") {
 test("perftests") {
   output_name = "mojo_public_system_perftests"
 
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../../build/config:mojo_sdk" ]
   sources = [
     "core_perftest.cc",
   ]
 
   deps = [
+    "../../environment",
+    "../../../cpp/system",
+    "../../../cpp/test_support:test_utils",
+    "../../../cpp/utility",
     "//base",
     "//mojo/edk/test:run_all_perftests",
-    rebase_path("mojo/public/c/environment", ".", mojo_root),
-    rebase_path("mojo/public/cpp/system", ".", mojo_root),
-    rebase_path("mojo/public/cpp/test_support:test_utils", ".", mojo_root),
-    rebase_path("mojo/public/cpp/utility", ".", mojo_root),
-    rebase_path("testing/gtest", ".", mojo_third_party_root),
+    "//testing/gtest",
   ]
 }

@@ -2,10 +2,8 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-import("//build/config/mojo.gni")
-
 source_set("system") {
-  public_configs = [ rebase_path("mojo/build/config", ".", mojo_root) + ":mojo_sdk" ]
+  public_configs = [ "../../../build/config:mojo_sdk" ]
   sources = [
     "buffer.h",
     "core.h",
@@ -16,5 +14,5 @@ source_set("system") {
     "message_pipe.h"
   ]
 
-  public_deps = [ rebase_path("mojo/public/c/system", ".", mojo_root) ]
+  public_deps = [ "../../c/system" ]
 }
