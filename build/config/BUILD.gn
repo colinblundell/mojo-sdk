@@ -5,8 +5,11 @@
 import("//build/config/mojo.gni")
 config("mojo_sdk") {
   include_dirs = [
-    mojo_root,
-    root_gen_dir + mojo_root,
-    mojo_third_party_root
+    # Include paths in the Mojo public SDK are specified relative to the
+    # directory holding the SDK.
+    "../../..",
+
+    # The same goes for files generated from mojoms.
+    root_gen_dir + "/" + rebase_path("../../..", "//"),
   ]
 }

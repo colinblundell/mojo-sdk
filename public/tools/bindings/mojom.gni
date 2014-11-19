@@ -152,17 +152,15 @@ template("mojom") {
       ":$generator_target_name",
     ]
 
-    relative_deps = rebase_path([
+    public_deps = rebase_path([
       "mojo/public/cpp/bindings",
     ], ".", mojo_root)
-
-    deps += relative_deps
 
     if (defined(invoker.deps)) {
       deps += invoker.deps
     }
     if (defined(invoker.public_deps)) {
-      public_deps = invoker.public_deps
+      public_deps += invoker.public_deps
     }
     if (defined(invoker.configs)) {
       configs += invoker.configs
