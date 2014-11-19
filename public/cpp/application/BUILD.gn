@@ -36,7 +36,7 @@ source_set("application") {
 
 # GYP version: mojo/public/mojo_public.gyp:mojo_application_standalone
 source_set("standalone") {
-  public_configs = [ "../../../build/config:mojo_sdk" ]
+  configs += [ "../../../build/config:mojo_sdk" ]
 
   sources = [
     "lib/application_runner.cc"
@@ -70,7 +70,7 @@ source_set("test_support") {
 
 source_set("test_support_standalone") {
   testonly = true
-  public_configs = [ "../../../build/config:mojo_sdk" ]
+  configs += [ "../../../build/config:mojo_sdk" ]
 
   sources = [ "lib/application_test_main.cc" ]
 

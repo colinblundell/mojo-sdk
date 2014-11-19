@@ -4,7 +4,7 @@
 
 # GYP version: mojo/mojo_base.gyp:mojo_public_bindings_unittests
 test("mojo_public_bindings_unittests") {
-  public_configs = [ "../../../../build/config:mojo_sdk" ]
+  configs += [ "../../../../build/config:mojo_sdk" ]
 
   sources = [
     "array_unittest.cc",

@@ -21,11 +21,11 @@ source_set("system") {
   ]
 }
 
-# In an is_component_build build, everything can link against ../../../edk/system
-# because it is built as a shared library. However, in a static build,
-# ../../../edk/system is linked into an executable (e.g., mojo_shell), and must be
-# injected into other shared libraries (i.e., Mojo Apps) that need the mojo
-# system API.
+# In an is_component_build build, everything can link against
+# ../../../edk/system because it is built as a shared library. However, in a
+# static build, ../../../edk/system is linked into an executable (e.g.,
+# mojo_shell), and must be injected into other shared libraries (i.e., Mojo
+# Apps) that need the mojo system API.
 #
 # For component targets, add c/system:for_component to your deps section.
 #
