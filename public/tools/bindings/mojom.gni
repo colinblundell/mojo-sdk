@@ -2,6 +2,8 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
+import("//build/config/mojo.gni")
+
 # Generate C++ and JavaScript source files from mojom files. The output files
 # will go under the generated file directory tree with the same path as each
 # input file.
@@ -28,7 +30,8 @@ template("mojom") {
   assert(defined(invoker.sources),
          "\"sources\" must be defined for the $target_name template.")
 
-  generator_root = "//mojo/public/tools/bindings"
+  generator_root =
+      rebase_path("mojo/public/tools/binding/mojom.gni", ".", mojo_root)
   generator_script = "$generator_root/mojom_bindings_generator.py"
   generator_sources = [
     generator_script,
@@ -141,8 +144,14 @@ template("mojom") {
     data = process_file_template(invoker.sources, generator_js_outputs)
     deps = [
       ":$generator_target_name",
-      "//mojo/public/cpp/bindings",
     ]
+
+    relative_deps = rebase_path([
+      "mojo/public/cpp/bindings",
+    ], ".", mojo_root)
+
+    deps += relative_deps
+
     if (defined(invoker.deps)) {
       deps += invoker.deps
     }
@@ -184,10 +193,10 @@ template("mojom") {
 
     java_target_name = target_name + "_java"
     android_library(java_target_name) {
-      deps = [
-        "//mojo/public/java:bindings",
-        "//mojo/public/java:system",
-      ]
+      deps = rebase_path([
+        "mojo/public/java:bindings",
+        "mojo/public/java:system",
+      ], ".", mojo_root)
 
       foreach(d, all_deps) {
         # Resolve the name, so that a target //mojo/something becomes
