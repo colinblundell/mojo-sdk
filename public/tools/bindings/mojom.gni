@@ -31,7 +31,7 @@ template("mojom") {
          "\"sources\" must be defined for the $target_name template.")
 
   generator_root =
-      rebase_path("mojo/public/tools/binding/mojom.gni", ".", mojo_root)
+      rebase_path("mojo/public/tools/bindings", ".", mojo_root)
   generator_script = "$generator_root/mojom_bindings_generator.py"
   generator_sources = [
     generator_script,
