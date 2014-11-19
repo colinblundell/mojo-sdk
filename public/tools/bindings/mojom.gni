@@ -133,6 +133,12 @@ template("mojom") {
     ]
   }
 
+  if (defined(mojom_import_dirs)) {
+    foreach(d, mojom_import_dirs) {
+      args += ["-I", rebase_path(d, root_build_dir)]
+    }
+  }
+
   source_set(target_name) {
     if (defined(invoker.visibility)) {
       visibility = invoker.visibility
