@@ -4,6 +4,7 @@
 
 source_set("bindings") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "array.h",
     "binding.h",
@@ -63,6 +64,7 @@ source_set("bindings") {
 
 source_set("callback") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "callback.h",
     "lib/callback_internal.h",

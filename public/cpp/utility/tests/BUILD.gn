@@ -8,11 +8,12 @@ test("mojo_public_utility_unittests") {
     "../../system",
     "../../test_support:test_utils",
     "../../utility",
-    "//mojo/edk/test:run_all_unittests",
+    "../../../../edk/test:run_all_unittests",
     "//testing/gtest",
   ]
 
   public_configs = [ "../../../../build/config:mojo_sdk" ]
+
   sources = [
     "run_loop_unittest.cc",
   ]

@@ -4,6 +4,7 @@
 
 source_set("environment") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "async_waiter.h",
     "logger.h",

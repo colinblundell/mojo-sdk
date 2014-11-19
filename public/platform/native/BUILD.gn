@@ -9,6 +9,7 @@ source_set("system_thunks") {
   ]
 
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "system_thunks.h",
     "system_thunks.cc",
@@ -31,6 +32,7 @@ source_set("gles2_thunks") {
   visibility = [ "../../gles2:for_shared_library" ]
 
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "gles2_thunks.cc",
     "gles2_thunks.h",

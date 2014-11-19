@@ -5,6 +5,7 @@
 # GYP version: mojo/mojo_base.gyp:mojo_public_bindings_unittests
 test("mojo_public_bindings_unittests") {
   public_configs = [ "../../../../build/config:mojo_sdk" ]
+
   sources = [
     "array_unittest.cc",
     "bounds_checker_unittest.cc",
@@ -32,7 +33,7 @@ test("mojo_public_bindings_unittests") {
     "../../test_support:test_utils",
     "../../utility",
     "../../../interfaces/bindings/tests:test_interfaces",
-    "//mojo/edk/test:run_all_unittests",
+    "../../../../edk/test:run_all_unittests",
     "//testing/gtest",
     ":mojo_public_bindings_test_utils",
   ]
@@ -40,6 +41,7 @@ test("mojo_public_bindings_unittests") {
 
 source_set("mojo_public_bindings_test_utils") {
   public_configs = [ "../../../../build/config:mojo_sdk" ]
+
   sources = [
     "validation_test_input_parser.cc",
     "validation_test_input_parser.h",

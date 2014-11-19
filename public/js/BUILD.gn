@@ -4,6 +4,7 @@
 
 source_set("js") {
   public_configs = [ "../../build/config:mojo_sdk" ]
+
   sources = [
     "constants.cc",
     "constants.h",

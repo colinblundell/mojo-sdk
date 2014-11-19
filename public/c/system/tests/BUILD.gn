@@ -13,6 +13,7 @@ source_set("tests") {
   ]
 
   public_configs = [ "../../../../build/config:mojo_sdk" ]
+
   sources = [
     "core_unittest.cc",
     "core_unittest_pure_c.c",
@@ -25,6 +26,7 @@ test("perftests") {
   output_name = "mojo_public_system_perftests"
 
   public_configs = [ "../../../../build/config:mojo_sdk" ]
+
   sources = [
     "core_perftest.cc",
   ]
@@ -34,8 +36,8 @@ test("perftests") {
     "../../../cpp/system",
     "../../../cpp/test_support:test_utils",
     "../../../cpp/utility",
+    "../../../../edk/test:run_all_perftests",
     "//base",
-    "//mojo/edk/test:run_all_perftests",
     "//testing/gtest",
   ]
 }

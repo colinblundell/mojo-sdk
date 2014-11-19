@@ -6,13 +6,14 @@
 source_set("test_utils") {
   testonly = true
   deps = [
-    "../../c/test_support",
     "../system",
+    "../../c/test_support",
     "//base",
     "//testing/gtest",
   ]
 
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "lib/test_support.cc",
     "lib/test_utils.cc",

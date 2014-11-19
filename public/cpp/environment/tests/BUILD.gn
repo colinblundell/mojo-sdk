@@ -5,6 +5,7 @@
 # GYP version: mojo/mojo_base.gyp:mojo_public_environment_unittests
 test("mojo_public_environment_unittests") {
   public_configs = [ "../../../../build/config:mojo_sdk" ]
+
   sources = [
     "async_wait_unittest.cc",
     "async_waiter_unittest.cc",
@@ -19,7 +20,7 @@ test("mojo_public_environment_unittests") {
     "../../test_support:test_utils",
     "../../utility",
     "../../../c/environment",
-    "//mojo/edk/test:run_all_unittests",
+    "../../../../edk/test:run_all_unittests",
     "//testing/gtest",
   ]
 }

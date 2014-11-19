@@ -4,6 +4,7 @@
 
 source_set("environment") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "async_waiter.h",
     "logging.h",
@@ -20,6 +21,7 @@ source_set("environment") {
 
 source_set("standalone") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "lib/async_waiter.cc",
     "lib/default_async_waiter.cc",
@@ -33,7 +35,7 @@ source_set("standalone") {
   public_deps = [ ":environment" ]
 
   deps = [
-    "../../c/environment",
     "../utility",
+    "../../c/environment",
   ]
 }

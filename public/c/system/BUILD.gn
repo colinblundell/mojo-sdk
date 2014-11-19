@@ -8,6 +8,7 @@
 # :for_shared_library targets, depending on the type of target you are.
 source_set("system") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "buffer.h",
     "core.h",
@@ -20,14 +21,13 @@ source_set("system") {
   ]
 }
 
-# In an is_component_build build, everything can link against //mojo/edk/system
+# In an is_component_build build, everything can link against ../../../edk/system
 # because it is built as a shared library. However, in a static build,
-# //mojo/edk/system is linked into an executable (e.g., mojo_shell), and must be
+# ../../../edk/system is linked into an executable (e.g., mojo_shell), and must be
 # injected into other shared libraries (i.e., Mojo Apps) that need the mojo
 # system API.
 #
-# For component targets, add c/system:for_component to your deps
-# section.
+# For component targets, add c/system:for_component to your deps section.
 #
 # For shared_library targets (e.g., a Mojo App), add
 # c/system:for_shared_library to your deps
@@ -35,7 +35,7 @@ source_set("system") {
 group("for_shared_library") {
   public_deps = [ ":system" ]
   if (is_component_build) {
-    deps = [ "//mojo/edk/system" ]
+    deps = [ "../../../edk/system" ]
   } else {
     deps = [ "../../platform/native:system_thunks" ]
   }
@@ -44,6 +44,6 @@ group("for_shared_library") {
 group("for_component") {
   public_deps = [ ":system" ]
   if (is_component_build) {
-    deps = [ "//mojo/edk/system" ]
+    deps = [ "../../../edk/system" ]
   }
 }

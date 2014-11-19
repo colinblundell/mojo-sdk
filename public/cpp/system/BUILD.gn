@@ -4,6 +4,7 @@
 
 source_set("system") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "buffer.h",
     "core.h",

@@ -132,6 +132,7 @@ template("mojom") {
       "-o", rebase_path(root_gen_dir),
     ]
 
+    # Add any import dirs that the user specified in //build/config/mojo.gni.
     if (defined(mojom_import_dirs)) {
       foreach(d, mojom_import_dirs) {
         args += ["-I", rebase_path(d, root_build_dir)]

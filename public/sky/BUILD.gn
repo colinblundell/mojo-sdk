@@ -4,7 +4,6 @@
 
 action_foreach("sky") {
   script = "convert_amd_modules_to_sky.py"
-  public_configs = [ "../../build/config:mojo_sdk" ]
   sources = [
     "../js/buffer.js",
     "../js/codec.js",

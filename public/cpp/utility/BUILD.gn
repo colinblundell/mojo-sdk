@@ -4,6 +4,7 @@
 
 source_set("utility") {
   public_configs = [ "../../../build/config:mojo_sdk" ]
+
   sources = [
     "mutex.h",
     "run_loop.h",

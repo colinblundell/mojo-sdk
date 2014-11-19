@@ -21,7 +21,8 @@ group("core") {
 
 shared_library("mojo_dart_core") {
   defines = ["DART_SHARED_LIB"]
-  public_configs = [ "mojo/build/config:mojo_sdk" ]
+  configs = [ "mojo/build/config:mojo_sdk" ]
+
   sources = [
     "src/mojo_dart_core.cc",
   ]
@@ -37,7 +38,6 @@ shared_library("mojo_dart_core") {
 
 
 copy("copy_core_library") {
-  public_configs = [ "mojo/build/config:mojo_sdk" ]
   sources = [
     "$root_out_dir/libmojo_dart_core.so",
   ]
@@ -51,7 +51,6 @@ copy("copy_core_library") {
 
 
 copy("bindings") {
-  public_configs = [ "mojo/build/config:mojo_sdk" ]
   sources = [
     "bindings.dart",
     "core.dart",

@@ -5,14 +5,15 @@
 # GYP version: mojo/mojo_base.gyp:mojo_public_system_unittests
 test("mojo_public_system_unittests") {
   deps = [
-    "../../../c/system/tests",
     "../../system",
     "../../test_support:test_utils",
-    "//mojo/edk/test:run_all_unittests",
+    "../../../c/system/tests",
+    "../../../../edk/test:run_all_unittests",
     "//testing/gtest",
   ]
 
   public_configs = [ "../../../../build/config:mojo_sdk" ]
+
   sources = [
     "core_unittest.cc",
     "macros_unittest.cc",
